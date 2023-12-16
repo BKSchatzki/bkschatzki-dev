@@ -17,7 +17,7 @@ const pageData = [
     main: {
       heading: "Need a site?",
       subheading:
-        "You want a site that looks good, works well, and is easy to maintain. I can help you with that.",
+        "Is your web presence working for you? You want a site that looks good, works well, and is easy to maintain. I can help you with that. Here's how I make it work for you.",
     },
     navLink: {
       name: "Services",
@@ -32,7 +32,7 @@ const pageData = [
   {
     title: "Projects",
     main: {
-      heading: "",
+      heading: "Front-to-Back",
       subheading: "",
     },
     navLink: {
