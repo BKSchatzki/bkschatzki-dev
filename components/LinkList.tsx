@@ -4,13 +4,11 @@ import Button from "./Button";
 const LinkList = () => {
   return (
     <ul>
-      {siteLinks.map((link, index) => {
-        return (
-          <li key={index}>
-            <Button name={link.name} href={link.href} />
-          </li>
-        );
-      })}
+      {siteLinks.map((link, index) => (
+        <li key={index}>
+          <Button name={link.name} href={link.href} />
+        </li>
+      ))}
     </ul>
   );
 };
