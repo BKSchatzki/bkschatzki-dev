@@ -1,9 +1,10 @@
 import pageData from "@/data/pageData";
+
 import Link from "next/link";
 
 const NavLinks = () => {
   return (
-    <ul className="fixed flex min-h-screen w-screen flex-col items-center justify-center gap-6 bg-black bg-opacity-50 bg-clip-padding py-6 text-center backdrop-blur-lg backdrop-filter">
+    <ul className="fixed flex min-h-screen w-screen flex-col items-center justify-center gap-6 bg-black bg-opacity-80 bg-clip-padding py-6 text-center backdrop-blur-md backdrop-filter">
       {pageData.map((page, index) => (
         <li key={index}>
           <Link href={page.navLink.href} className="m-1 flex flex-col">

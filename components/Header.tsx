@@ -9,7 +9,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="h-16">
+    <header className="fixed h-16">
       <nav
         className={`fixed flex w-full flex-col items-end justify-start ${
           isMenuOpen ? "h-full" : "h-16"

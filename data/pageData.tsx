@@ -5,18 +5,6 @@ const pageData = [
       heading: "Hey traveler,",
       subheading:
         "Fancy seeing you here. I'm Brendan, a web developer. I build websites and web apps for small businesses and startups. Let's get you to where you need to go.",
-      callToAction: [
-        {
-          name: "Services",
-          description: "I need a website",
-          href: "/services",
-        },
-        {
-          name: "Projects",
-          description: "I need a dev",
-          href: "/projects",
-        },
-      ],
     },
     navLink: { name: "Home", description: "Back to home", href: "/" },
     styleClasses: {
