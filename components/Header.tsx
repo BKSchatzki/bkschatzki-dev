@@ -9,9 +9,12 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed w-full">
-      <nav className="mx-auto my-4 h-16 w-11/12">
-        <button className="ms-auto" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+    <header className="">
+      <nav className="fixed flex h-16 w-full flex-col items-end justify-start">
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="fixed right-4 top-4 z-10"
+        >
           <Menu />
         </button>
         {isMenuOpen && <NavLinks />}
