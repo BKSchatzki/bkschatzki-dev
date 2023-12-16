@@ -1,7 +1,7 @@
 import siteLinks from "@/data/siteLinks";
 import Button from "./Button";
 
-const LinkList = () => {
+const NavLinks = () => {
   return (
     <ul>
       {siteLinks.map((link, index) => (
@@ -13,4 +13,4 @@ const LinkList = () => {
   );
 };
 
-export default LinkList;
+export default NavLinks;

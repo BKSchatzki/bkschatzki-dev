@@ -7,7 +7,7 @@ type ButtonProps = {
 
 const Button = ({ name, href }: ButtonProps) => {
   return (
-    <Link href={href} className="btn m-1 w-24">
+    <Link href={href} className="m-1 w-24">
       {name}
     </Link>
   );
