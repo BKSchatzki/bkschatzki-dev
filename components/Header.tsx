@@ -1,12 +1,15 @@
 "use client";
 
 import NavLinks from "./NavLinks";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 import { useState } from "react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <header className="fixed h-16">
@@ -15,13 +18,16 @@ const Header = () => {
           isMenuOpen ? "h-full" : "h-16"
         }`}
       >
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="fixed right-4 top-4 z-10"
-        >
-          <Menu size={32} />
-        </button>
-        {isMenuOpen && <NavLinks />}
+        <label className="swap swap-flip fixed right-4 top-4 z-10">
+          <input
+            type="checkbox"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            checked={isMenuOpen}
+          />
+          <Menu className="swap-off" size={32} />
+          <X className="swap-on" size={32} />
+        </label>
+        {isMenuOpen && <NavLinks closeMenu={closeMenu} />}
       </nav>
     </header>
   );
