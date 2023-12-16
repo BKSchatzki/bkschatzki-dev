@@ -18,15 +18,16 @@ const pageData = [
     main: {
       heading: "Need a site?",
       subheading:
-        "Is your web presence working for you? You want a site that looks good, works well, and is easy to maintain. I can help you with that. Here's how I make it work for you.",
+        "Is your web presence working for you? You want a site that looks good, works well, and is easy to maintain. I can help you with that. Here's how it works.",
     },
     sections: [
       {
-        name: "Carousel",
-        description: "",
+        type: "carousel",
+        heading: "Step-by-step",
+        subheading: "",
         items: [
           {
-            heading: "1. Consultation",
+            heading: "Consultation",
             subheading:
               "It all begins with a conversation where we'll pinpoint what this project is all about.",
             image: "",
@@ -34,7 +35,7 @@ const pageData = [
             media: "",
           },
           {
-            heading: "2. Proposal",
+            heading: "Proposal",
             subheading:
               "A detailed project proposal including a visual preview will be presented and a plan of action will be decided.",
             image: "",
@@ -42,7 +43,7 @@ const pageData = [
             media: "",
           },
           {
-            heading: "3. Creation",
+            heading: "Creation",
             subheading:
               "Clients receive regular updates regarding their project status while I create and test it.",
             image: "",
@@ -50,7 +51,7 @@ const pageData = [
             media: "",
           },
           {
-            heading: "4. Launch & Support",
+            heading: "Launch & Support",
             subheading:
               "Peace of mind is delivered with the final project in the form of available ongoing support.",
             image: "",
