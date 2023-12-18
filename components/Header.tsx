@@ -21,7 +21,7 @@ const Header = () => {
         <label className="swap swap-flip fixed right-4 top-4 z-10">
           <input
             type="checkbox"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onChange={() => setIsMenuOpen(!isMenuOpen)}
             checked={isMenuOpen}
           />
           <Menu className="swap-off" size={32} />
