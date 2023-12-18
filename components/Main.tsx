@@ -5,7 +5,7 @@ const Main = ({ page }: { page: string }) => {
 
   return (
     <main className="mx-auto flex flex-col items-center justify-start text-center">
-      <section className="max-w-md">
+      <section>
         <h1
           className={`text-4xl font-bold ${thisPage?.styleClasses.textColor}`}
         >

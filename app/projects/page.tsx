@@ -1,10 +1,15 @@
+import PageWrapper from "@/components/PageWrapper";
 import Main from "@/components/Main";
+import Carousel from "@/components/Carousel";
+import CallToAction from "@/components/CallToAction";
 
 const Projects = () => {
   return (
-    <div className="mx-auto flex min-h-screen w-11/12 max-w-3xl flex-col items-center justify-start">
+    <PageWrapper>
       <Main page="Projects" />
-    </div>
+      <Carousel page="Services" />
+      <CallToAction linkedPages={["Contact"]} />
+    </PageWrapper>
   );
 };
 

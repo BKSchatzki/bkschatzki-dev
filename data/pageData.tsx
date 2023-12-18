@@ -75,7 +75,8 @@ const pageData = [
     title: "Projects",
     main: {
       heading: "Front-to-Back",
-      subheading: "",
+      subheading:
+        "I build software that enhances people's lives and work. Here are some of my projects I've found to be most impactful.",
     },
     sections: [],
     navLink: {
