@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <PageWrapper>
       <Main page="Projects" />
-      <CallToAction linkedPages={["Contact"]} />
+      <CallToAction linkedPages={["Services", "Contact"]} />
     </PageWrapper>
   );
 };

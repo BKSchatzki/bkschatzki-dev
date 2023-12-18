@@ -8,7 +8,7 @@ const Services = () => {
     <PageWrapper>
       <Main page="Services" />
       <Carousel page="Services" />
-      <CallToAction linkedPages={["Contact"]} />
+      <CallToAction linkedPages={["Projects", "Contact"]} />
     </PageWrapper>
   );
 };

@@ -26,15 +26,17 @@ const pageMains = [
   {
     page: "About",
     main: {
-      heading: "",
-      subheading: "",
+      heading: "Who am I?",
+      subheading:
+        "My story is long and winding. Here's the short version. I'm a web developer, a musician, and a traveler. I'm a husband and a father. I'm a Christian. I'm a learner. I'm a teacher. I'm a friend. I'm a son. I'm a brother. I'm a human. I'm a work in progress.",
     },
   },
   {
     page: "Contact",
     main: {
-      heading: "",
-      subheading: "",
+      heading: "Let's work together.",
+      subheading:
+        "Shoot me an email and let's get started. I;'m looking forward to hearing from you. I'll get back to you as soon as I can. Thanks!",
     },
   },
 ];

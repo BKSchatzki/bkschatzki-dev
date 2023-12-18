@@ -3,7 +3,7 @@ import pageStyles from "@/data/pageStyles";
 
 const Carousel = ({ page }: { page: String }) => {
   const thisPage = pageData.find((element) => element.page === page);
-  const thisCarousel = thisPage?.sections.find(
+  const thisCarousel = thisPage?.sections?.find(
     (element) => element.type === "carousel",
   );
 

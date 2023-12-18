@@ -6,7 +6,7 @@ const About = () => {
   return (
     <PageWrapper>
       <Main page="About" />
-      <CallToAction linkedPages={["Contact"]} />
+      <CallToAction linkedPages={["Home", "Contact"]} />
     </PageWrapper>
   );
 };
