@@ -4,7 +4,7 @@ const Main = ({ page }: { page: string }) => {
   const thisPage = pageData.find((e) => e.title === page);
 
   return (
-    <main className="mx-auto mt-16 flex flex-col items-center justify-start text-center sm:mt-32">
+    <main className="mx-auto flex flex-col items-center justify-start text-center">
       <section className="max-w-md">
         <h1
           className={`text-4xl font-bold ${thisPage?.styleClasses.textColor}`}

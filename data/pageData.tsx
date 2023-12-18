@@ -37,7 +37,7 @@ const pageData = [
           {
             heading: "Proposal",
             subheading:
-              "A detailed project proposal including a visual preview will be presented and a plan of action will be decided.",
+              "A detailed project proposal will be presented and a plan of action will be decided.",
             image: "",
             imageAlt: "",
             media: "",
