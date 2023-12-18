@@ -10,17 +10,17 @@ const NavLinks = ({
   closeMenu: MouseEventHandler<HTMLDivElement>;
 }) => {
   return (
-    <ul className="fixed flex min-h-screen w-screen flex-col items-center justify-center gap-6 bg-black bg-opacity-80 bg-clip-padding py-6 text-center backdrop-blur-md backdrop-filter">
+    <ul className="fixed flex min-h-screen w-screen flex-col items-center justify-center gap-6 bg-black bg-opacity-80 bg-clip-padding text-center backdrop-blur-md backdrop-filter sm:gap-10">
       {pageData.map((element, index) => (
         <li key={index}>
           <Link href={element.navLink?.href || "/"} className="">
-            <div onClick={closeMenu} className="m-1 flex flex-col">
+            <div onClick={closeMenu} className="flex flex-col">
               <span
-                className={`text-2xl font-bold ${element.styles?.textColor}`}
+                className={`text-2xl font-bold sm:text-4xl ${element.styles?.textColor}`}
               >
                 {element.navLink?.name}
               </span>
-              <span className="text-neutral-300">
+              <span className="text-neutral-300 sm:text-xl">
                 {element.navLink?.description}
               </span>
             </div>
