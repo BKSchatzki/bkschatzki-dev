@@ -10,7 +10,7 @@ const CallToAction = ({ linkedPages }: { linkedPages: string[] }) => {
   return (
     <ul className="mt-6 grid w-full grid-cols-12 gap-3 text-center sm:mt-10 sm:gap-4">
       {thesePages?.map((element, index) => (
-        <li key={index} className="col-span-6">
+        <li key={index} className="col-span-6 only:col-start-4">
           <Link
             href={element.navLink?.href || "/"}
             className={`m-1 flex w-full flex-col rounded-md px-4 py-2 text-black sm:px-6 sm:py-3 ${element.styles?.bgColorAccent}`}

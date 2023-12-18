@@ -1,4 +1,5 @@
 import PageWrapper from "@/components/PageWrapper";
+import ContentWrapper from "@/components/ContentWrapper";
 import Main from "@/components/Main";
 import Carousel from "@/components/Carousel";
 import CallToAction from "@/components/CallToAction";
@@ -6,9 +7,11 @@ import CallToAction from "@/components/CallToAction";
 const Services = () => {
   return (
     <PageWrapper>
-      <Main page="Services" />
-      <Carousel page="Services" />
-      <CallToAction linkedPages={["Projects", "Contact"]} />
+      <ContentWrapper>
+        <Main page="Services" />
+        <Carousel page="Services" />
+        <CallToAction linkedPages={["Contact"]} />
+      </ContentWrapper>
     </PageWrapper>
   );
 };

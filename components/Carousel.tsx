@@ -1,5 +1,4 @@
 import pageData from "@/data/pageData";
-import pageStyles from "@/data/pageStyles";
 
 const Carousel = ({ page }: { page: String }) => {
   const thisPage = pageData.find((element) => element.page === page);

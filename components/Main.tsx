@@ -1,5 +1,4 @@
 import pageData from "@/data/pageData";
-import pageStyles from "@/data/pageStyles";
 
 const Main = ({ page }: { page: string }) => {
   const thisPage = pageData.find((element) => element.page === page);
