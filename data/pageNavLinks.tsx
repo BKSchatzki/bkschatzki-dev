@@ -1,7 +1,11 @@
 const pageNavLinks = [
   {
     page: "Home",
-    navLink: { name: "Home", description: "Back to home", href: "/" },
+    navLink: {
+      name: "Home",
+      description: "Back to home",
+      href: "/",
+    },
   },
   {
     page: "Services",
@@ -21,11 +25,19 @@ const pageNavLinks = [
   },
   {
     page: "About",
-    navLink: { name: "About", description: "Get to know me", href: "/about" },
+    navLink: {
+      name: "About",
+      description: "Get to know me",
+      href: "/about",
+    },
   },
   {
     page: "Contact",
-    navLink: { name: "Contact", description: "Get in touch", href: "/contact" },
+    navLink: {
+      name: "Contact",
+      description: "Get in touch",
+      href: "/contact",
+    },
   },
 ];
 
