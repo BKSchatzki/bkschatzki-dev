@@ -1,7 +1,8 @@
 import pageData from "@/data/pageData";
+import pageStyles from "@/data/pageStyles";
 
 const Carousel = ({ page }: { page: String }) => {
-  const thisPage = pageData.find((element) => element.title === page);
+  const thisPage = pageData.find((element) => element.page === page);
   const thisCarousel = thisPage?.sections.find(
     (element) => element.type === "carousel",
   );
@@ -12,7 +13,7 @@ const Carousel = ({ page }: { page: String }) => {
         <>
           <section
             key={index}
-            className="carousel-item h-[67.666667%] flex-col items-center justify-center gap-3 rounded-md bg-gradient-to-b from-neutral-950 to-transparent px-6 py-3 ring-neutral-300"
+            className={`carousel-item h-[67.666667%] flex-col items-center justify-center gap-3 rounded-md px-6 py-3 ${thisPage?.styles?.bgColorSectionGradient}`}
           >
             <h3 className="text-2xl font-semibold">{element.heading}</h3>
             <p className="text-center text-neutral-300">{element.subheading}</p>

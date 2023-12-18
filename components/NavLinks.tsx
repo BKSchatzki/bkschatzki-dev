@@ -9,20 +9,19 @@ const NavLinks = ({
 }: {
   closeMenu: MouseEventHandler<HTMLDivElement>;
 }) => {
-  // Change the type of closeMenu
   return (
     <ul className="fixed flex min-h-screen w-screen flex-col items-center justify-center gap-6 bg-black bg-opacity-80 bg-clip-padding py-6 text-center backdrop-blur-md backdrop-filter">
       {pageData.map((element, index) => (
         <li key={index}>
-          <Link href={element.navLink.href} className="">
+          <Link href={element.navLink?.href || "/"} className="">
             <div onClick={closeMenu} className="m-1 flex flex-col">
               <span
-                className={`text-2xl font-bold ${element.styleClasses.textColor}`}
+                className={`text-2xl font-bold ${element.styles?.textColor}`}
               >
-                {element.navLink.name}
+                {element.navLink?.name}
               </span>
               <span className="text-neutral-300">
-                {element.navLink.description}
+                {element.navLink?.description}
               </span>
             </div>
           </Link>
