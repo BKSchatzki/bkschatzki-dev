@@ -1,7 +1,7 @@
 import pageData from "@/data/pageData";
 
 const Main = ({ page }: { page: string }) => {
-  const thisPage = pageData.find((element) => element.page === page);
+  const thisPage = pageData.find((e) => e.page === page);
 
   return (
     <main className="mx-auto flex flex-col items-center justify-start text-center sm:text-xl">
