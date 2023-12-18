@@ -70,7 +70,7 @@ export default function Starfield(props: Props) {
             brightness +
             ")";
           c.fillStyle = rgb;
-          c.fillRect(x, y, 2, 2);
+          c.fillRect(x, y, 3, 3);
         };
 
         const moveStars = (distance: number) => {
