@@ -9,7 +9,8 @@ const pageData = [
     sections: [],
     navLink: { name: "Home", description: "Back to home", href: "/" },
     styleClasses: {
-      bgColor: "bg-gradient-to-br from-amber-400 to-yellow-400",
+      bgColor: "bg-black",
+      textBgColor: "bg-yellow-400",
       textColor: "text-yellow-400",
     },
   },
@@ -67,7 +68,8 @@ const pageData = [
       href: "/services",
     },
     styleClasses: {
-      bgColor: "bg-gradient-to-br from-green-400 to-emerald-400",
+      bgColor: "bg-[hsl(167,96%,2.25%)]",
+      textBgColor: "bg-emerald-400",
       textColor: "text-emerald-400",
     },
   },
@@ -85,7 +87,8 @@ const pageData = [
       href: "/projects",
     },
     styleClasses: {
-      bgColor: "bg-gradient-to-br from-cyan-400 to-sky-400",
+      bgColor: "bg-[hsl(204,80%,4%)]",
+      textBgColor: "bg-sky-400",
       textColor: "text-sky-400",
     },
   },
@@ -98,7 +101,8 @@ const pageData = [
     sections: [],
     navLink: { name: "About", description: "Get to know me", href: "/about" },
     styleClasses: {
-      bgColor: "bg-gradient-to-br from-indigo-400 to-violet-400",
+      bgColor: "bg-[hsl(261,73%,5.75%)]",
+      textBgColor: "bg-violet-400",
       textColor: "text-violet-400",
     },
   },
@@ -111,7 +115,8 @@ const pageData = [
     sections: [],
     navLink: { name: "Contact", description: "Get in touch", href: "/contact" },
     styleClasses: {
-      bgColor: "bg-gradient-to-br from-fuchsia-400 to-pink-400",
+      bgColor: "bg-[hsl(336,84%,4.25%)]",
+      textBgColor: "bg-pink-400",
       textColor: "text-pink-400",
     },
   },

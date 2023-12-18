@@ -13,7 +13,7 @@ const CallToAction = ({ linkedPages }: { linkedPages: string[] }) => {
         <li key={index}>
           <Link
             href={element.navLink.href}
-            className={`m-1 flex w-48 flex-col rounded-md px-6 py-3 text-black ${element.styleClasses.bgColor}`}
+            className={`m-1 flex w-48 flex-col rounded-md px-6 py-3 text-black ${element.styleClasses.textBgColor}`}
           >
             <span className="text-xl font-bold">{element.navLink.name}</span>
             <span className="text-sm font-semibold">
