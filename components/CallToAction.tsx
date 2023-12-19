@@ -1,14 +1,30 @@
+"use client";
+
 import pageData from "@/data/pageData";
 
 import Link from "next/link";
 
+import { useRef } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
+
 const CallToAction = ({ linkedPages }: { linkedPages: string[] }) => {
   const thesePages = pageData.filter((e) => linkedPages.includes(e.page));
+
+  const ref = useRef(null);
+  const isInView = useInView(ref);
 
   return (
     <ul className="mt-6 grid w-full grid-cols-12 gap-3 text-center sm:mt-10 sm:gap-4">
       {thesePages?.map((page, index) => (
-        <li key={index} className="col-span-6 only:col-start-4">
+        <motion.li
+          key={index}
+          ref={ref}
+          className="col-span-6 only:col-start-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isInView ? 1 : 0 }}
+          exit={{ opacity: 0 }}
+          transition={{ delay: 0.2 }}
+        >
           <Link
             href={page.navLink?.href || "/"}
             className={`m-1 flex w-full flex-col rounded-md px-4 py-2 text-black sm:px-6 sm:py-3 ${page.styles?.bgColorAccent}`}
@@ -20,7 +36,7 @@ const CallToAction = ({ linkedPages }: { linkedPages: string[] }) => {
               {page.navLink?.description}
             </span>
           </Link>
-        </li>
+        </motion.li>
       ))}
     </ul>
   );

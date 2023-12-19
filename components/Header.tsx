@@ -19,7 +19,11 @@ const Header = () => {
         }`}
       >
         <div className="hidden sm:block">
-          <NavLinks closeMenu={() => {}} navType="iconRow" />
+          <NavLinks
+            closeMenu={() => {}}
+            navType="iconRow"
+            isMenuOpen={isMenuOpen}
+          />
         </div>
         <label className="swap swap-flip absolute right-4 top-4 z-10 sm:right-6 sm:top-6">
           <input
@@ -32,7 +36,13 @@ const Header = () => {
           <Menu className="swap-off hidden sm:block" size={48} />
           <X className="swap-on hidden sm:block" size={48} />
         </label>
-        {isMenuOpen && <NavLinks closeMenu={closeMenu} navType="drawerMenu" />}
+        {isMenuOpen && (
+          <NavLinks
+            closeMenu={closeMenu}
+            navType="drawerMenu"
+            isMenuOpen={isMenuOpen}
+          />
+        )}
       </nav>
     </header>
   );
