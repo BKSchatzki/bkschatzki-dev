@@ -11,9 +11,7 @@ const Main = ({ page }: { page: string }) => {
         >
           {thisPage?.main?.heading}
         </h1>
-        <p className="pt-6 text-neutral-300 sm:pt-10">
-          {thisPage?.main?.subheading}
-        </p>
+        <p className="pt-6 sm:pt-10">{thisPage?.main?.subheading}</p>
       </section>
     </main>
   );

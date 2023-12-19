@@ -24,7 +24,7 @@ const NavLinks = ({
                   >
                     {page.navLink?.name}
                   </span>
-                  <span className="text-neutral-300 sm:text-xl">
+                  <span className="sm:text-xl">
                     {page.navLink?.description}
                   </span>
                 </div>

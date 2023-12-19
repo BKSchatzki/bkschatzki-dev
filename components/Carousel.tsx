@@ -11,12 +11,10 @@ const Carousel = ({ page }: { page: String }) => {
           key={index}
           className={`carousel-item h-[67.666667%] flex-col items-center justify-center gap-3 rounded-md px-6 py-3 ${thisPage?.styles?.bgColorSectionGradient}`}
         >
-          <h3 className="text-2xl font-semibold text-white sm:text-4xl">
+          <h3 className="text-2xl font-semibold text-neutral-50 sm:text-4xl">
             {item.heading}
           </h3>
-          <p className="text-center text-neutral-300 sm:text-xl">
-            {item.subheading}
-          </p>
+          <p className="text-center sm:text-xl">{item.subheading}</p>
         </section>
       ))}
     </article>
