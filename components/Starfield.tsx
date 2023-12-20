@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 interface Props {
   speedFactor?: number;
@@ -142,7 +143,7 @@ export default function Starfield(props: Props) {
   }, [starColor, backgroundColor, speedFactor, starCount]);
 
   return (
-    <canvas
+    <motion.canvas
       id="starfield"
       style={{
         padding: 0,
@@ -157,6 +158,9 @@ export default function Starfield(props: Props) {
         pointerEvents: "none",
         mixBlendMode: "screen",
       }}
-    ></canvas>
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      // transition={{ duration: 0.2 }}
+    ></motion.canvas>
   );
 }
