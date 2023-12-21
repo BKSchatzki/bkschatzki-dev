@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="scrollbar scrollbar-track-black scrollbar-thumb-neutral-400 overflow-y-scroll bg-black text-neutral-300">
+      <body className="overflow-y-scroll bg-black text-neutral-300 scrollbar scrollbar-track-black scrollbar-thumb-neutral-400 ">
         <Starfield
           starCount={1000}
           starColor={[255, 255, 255]}
