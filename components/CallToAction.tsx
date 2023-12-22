@@ -5,7 +5,7 @@ import pageData from "@/data/pageData";
 import Link from "next/link";
 
 import { useRef } from "react";
-import { motion, AnimatePresence, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 const CallToAction = ({ linkedPages }: { linkedPages: string[] }) => {
   const thesePages = pageData.filter((e) => linkedPages.includes(e.page));
