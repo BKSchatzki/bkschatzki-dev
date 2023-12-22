@@ -22,7 +22,7 @@ const NavLinks = ({
       {navType === "drawerMenu" && isMenuOpen && (
         <motion.ul
           key="backdrop"
-          className="fixed flex min-h-screen w-screen flex-col items-center justify-center gap-6 bg-black bg-opacity-80 bg-clip-padding text-center backdrop-blur-md backdrop-filter sm:gap-10"
+          className="fixed top-0 flex min-h-screen w-screen flex-col items-center justify-center gap-6 bg-black bg-opacity-80 bg-clip-padding text-center backdrop-blur-md backdrop-filter sm:gap-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { delay: 0.25 } }}
@@ -41,7 +41,7 @@ const NavLinks = ({
                 opacity: 0,
                 x: 500,
                 scale: 0.1,
-                transition: { delay: 0.05 * index },
+                transition: { delay: 0.05 * index, ease: "anticipate" },
               }}
             >
               <Link href={page.navLink?.href || "/"} className="">
