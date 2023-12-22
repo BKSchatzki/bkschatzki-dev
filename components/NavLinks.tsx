@@ -3,7 +3,9 @@
 import pageData from "@/data/pageData";
 
 import Link from "next/link";
+import { MousePointer2 } from "lucide-react";
 
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
 import { MouseEventHandler } from "react";
@@ -17,6 +19,8 @@ const NavLinks = ({
   navType: string;
   isMenuOpen: boolean;
 }) => {
+  const pathname = usePathname();
+
   return (
     <>
       {navType === "drawerMenu" && isMenuOpen && (
@@ -44,13 +48,18 @@ const NavLinks = ({
                 transition: { delay: 0.05 * index, ease: "anticipate" },
               }}
             >
-              <Link href={page.navLink?.href || "/"} className="">
-                <div onClick={closeMenu} className="flex flex-col">
+              <Link href={page.navLink?.href || "/"}>
+                <div onClick={closeMenu} className="relative flex flex-col">
                   <span
                     className={`text-2xl font-bold sm:text-4xl ${page.styles?.textColor}`}
                   >
                     {page.navLink?.name}
                   </span>
+                  {pathname === page.navLink?.href && (
+                    <div
+                      className={`absolute top-[57%] h-[3px] w-full sm:top-[61%] ${page.styles?.bgColorAccent}`}
+                    />
+                  )}
                   <span className="sm:text-xl">
                     {page.navLink?.description}
                   </span>
@@ -70,8 +79,14 @@ const NavLinks = ({
               exit={{ opacity: 0, y: -50, scale: 0.1 }}
               transition={{ delay: 0.3 + 0.1 * index }}
             >
-              <Link href={page.navLink?.href || "/"} className="">
+              <Link href={page.navLink?.href || "/"} className={"relative"}>
                 <span className={page.styles?.textColor}>{page.icon}</span>
+                {pathname === page.navLink?.href && (
+                  <motion.div
+                    layoutId="iconRowUnderline"
+                    className={`absolute left-[-25%] top-[110%] h-[3px] w-[150%] ${page.styles?.bgColorAccent}`}
+                  />
+                )}
               </Link>
             </motion.li>
           ))}

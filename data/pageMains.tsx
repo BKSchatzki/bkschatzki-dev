@@ -36,7 +36,7 @@ const pageMains = [
     main: {
       heading: "Let's work together.",
       subheading:
-        "Shoot me an email and let's get started. I;'m looking forward to hearing from you. I'll get back to you as soon as I can. Thanks!",
+        "Shoot me an email and let's get started. I'm looking forward to hearing from you. I'll get back to you as soon as I can. Thanks!",
     },
   },
 ];
