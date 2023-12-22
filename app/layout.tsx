@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Starfield from "@/components/Starfield";
+import PageWrapper from "@/components/PageWrapper";
 
 export const metadata: Metadata = {
   title: "B.K. Schatzki, SWE",
@@ -25,7 +26,7 @@ export default function RootLayout({
           backgroundColor="black"
         />
         <Header />
-        {children}
+        <PageWrapper>{children}</PageWrapper>
         <Footer />
       </body>
     </html>

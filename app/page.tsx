@@ -5,11 +5,9 @@ import CallToAction from "@/components/CallToAction";
 
 export default function Home() {
   return (
-    <PageWrapper>
-      <ContentWrapper>
-        <Main page="Home" />
-        <CallToAction linkedPages={["Services", "Projects"]} />
-      </ContentWrapper>
-    </PageWrapper>
+    <ContentWrapper>
+      <Main page="Home" />
+      <CallToAction linkedPages={["Services", "Projects"]} />
+    </ContentWrapper>
   );
 }
