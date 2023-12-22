@@ -21,9 +21,11 @@ const CallToAction = ({ linkedPages }: { linkedPages: string[] }) => {
           ref={ref}
           className="col-span-6 only:col-start-4"
           initial={{ opacity: 0 }}
-          animate={{ opacity: isInView ? 1 : 0 }}
+          animate={{
+            opacity: isInView ? 1 : 0,
+            transition: { delay: 0.2 + 0.15 },
+          }}
           exit={{ opacity: 0 }}
-          transition={{ delay: 0.2 }}
         >
           <Link
             href={page.navLink?.href || "/"}

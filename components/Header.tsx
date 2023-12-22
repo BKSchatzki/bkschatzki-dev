@@ -4,11 +4,18 @@ import NavLinks from "./NavLinks";
 import { Menu, X } from "lucide-react";
 
 import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuClosing, setIsMenuClosing] = useState(false);
+
   const closeMenu = () => {
-    setIsMenuOpen(false);
+    setIsMenuClosing(true);
+    setTimeout(() => {
+      setIsMenuOpen(false);
+      setIsMenuClosing(false);
+    }, 250);
   };
 
   return (
@@ -36,13 +43,15 @@ const Header = () => {
           <Menu className="swap-off hidden sm:block" size={48} />
           <X className="swap-on hidden sm:block" size={48} />
         </label>
-        {isMenuOpen && (
-          <NavLinks
-            closeMenu={closeMenu}
-            navType="drawerMenu"
-            isMenuOpen={isMenuOpen}
-          />
-        )}
+        <AnimatePresence mode="wait">
+          {isMenuOpen && !isMenuClosing && (
+            <NavLinks
+              closeMenu={closeMenu}
+              navType="drawerMenu"
+              isMenuOpen={isMenuOpen}
+            />
+          )}
+        </AnimatePresence>
       </nav>
     </header>
   );

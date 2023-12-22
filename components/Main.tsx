@@ -17,18 +17,21 @@ const Main = ({ page }: { page: string }) => {
             y: 25,
             scale: 0.8,
           }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            transition: { delay: 0.1 + 0.15 },
+          }}
           exit={{ opacity: 0, y: 25, scale: 0.8 }}
-          transition={{ delay: 0.1 }}
         >
           {thisPage?.main?.heading}
         </motion.h1>
         <motion.p
           className="pt-6 sm:pt-10"
           initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
+          animate={{ opacity: 1, scale: 1, transition: { delay: 0 + 0.15 } }}
           exit={{ opacity: 0, scale: 0.8 }}
-          transition={{ delay: 0 }}
         >
           {thisPage?.main?.subheading}
         </motion.p>
