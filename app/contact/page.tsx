@@ -1,12 +1,12 @@
 import ContentWrapper from "@/components/ContentWrapper";
 import Main from "@/components/Main";
-import CallToAction from "@/components/CallToAction";
+import ContactForm from "@/components/ContactForm";
 
 const Contact = () => {
   return (
     <ContentWrapper>
       <Main page="Contact" />
-      <CallToAction linkedPages={[]} />
+      <ContactForm />
     </ContentWrapper>
   );
 };
