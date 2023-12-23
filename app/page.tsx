@@ -7,7 +7,6 @@ export default function Home() {
     <ContentWrapper>
       <Main page="Home" />
       <CallToAction linkedPages={["Services", "Projects"]} />
-      <img src="." alt="" />
     </ContentWrapper>
   );
 }
