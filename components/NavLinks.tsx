@@ -3,7 +3,6 @@
 import pageData from "@/data/pageData";
 
 import Link from "next/link";
-import { MousePointer2 } from "lucide-react";
 
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
