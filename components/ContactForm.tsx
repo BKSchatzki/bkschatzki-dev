@@ -1,14 +1,13 @@
 "use client";
 
 import TextareaAutosize from "react-textarea-autosize";
-import { Rocket } from "lucide-react";
 
 import { motion } from "framer-motion";
 
 const Form = () => {
   return (
     <motion.form
-      className="mt-6 flex w-full flex-col items-center justify-center gap-3 sm:gap-6"
+      className="mt-6 flex w-full flex-col items-center justify-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.1 + 0.15 } }}
       exit={{ opacity: 0 }}
@@ -34,7 +33,7 @@ const Form = () => {
       </motion.label>
 
       <motion.label
-        className="w-full"
+        className="mt-3 w-full sm:mt-6"
         initial={{ opacity: 0, y: -25, scale: 0.8 }}
         animate={{
           opacity: 1,
@@ -54,7 +53,7 @@ const Form = () => {
       </motion.label>
 
       <motion.label
-        className="w-full"
+        className="-mb-1.5 mt-3 w-full sm:mt-6"
         initial={{ opacity: 0, y: -25, scale: 0.8 }}
         animate={{
           opacity: 1,
@@ -76,7 +75,7 @@ const Form = () => {
 
       <motion.button
         type="submit"
-        className="flex items-center justify-center gap-3 rounded-md bg-neutral-300 px-4 py-2 text-xl font-bold text-black focus:outline-neutral-300 sm:px-6 sm:py-3 sm:text-3xl"
+        className="mt-3 rounded-md bg-neutral-300 px-4 py-2 text-xl font-bold text-black focus:outline-neutral-300 sm:mt-6 sm:px-6 sm:py-3 sm:text-3xl"
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
@@ -85,7 +84,6 @@ const Form = () => {
         exit={{ opacity: 0 }}
       >
         Send
-        <Rocket />
       </motion.button>
     </motion.form>
   );
