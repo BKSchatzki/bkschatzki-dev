@@ -4,7 +4,7 @@ import TextareaAutosize from "react-textarea-autosize";
 
 import { motion } from "framer-motion";
 
-const Form = () => {
+const ContactForm = () => {
   return (
     <motion.form
       className="mt-6 flex w-full flex-col items-center justify-center"
@@ -89,4 +89,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default ContactForm;
