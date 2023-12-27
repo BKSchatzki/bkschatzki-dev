@@ -29,7 +29,7 @@ const Randomizer = ({ page }: { page: String }) => {
 
   return (
     <motion.article
-      className="relative mt-6 h-36 w-full rounded-md text-center sm:mt-10 sm:h-48"
+      className="mt-6 h-36 w-full rounded-md text-center sm:mt-10 sm:h-48"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.1 + 0.15 } }}
       exit={{ opacity: 0 }}
@@ -37,7 +37,7 @@ const Randomizer = ({ page }: { page: String }) => {
       <AnimatePresence mode="popLayout">
         <motion.section
           key={selectedItem?.heading}
-          className={`flex h-full flex-col items-center justify-center gap-1.5 rounded-md px-6 py-3 before:absolute before:left-0 before:top-0 before:h-full before:w-24 before:bg-gradient-to-l before:from-transparent before:from-5% before:to-black before:to-90% after:absolute after:right-0 after:top-0 after:h-full after:w-24 after:bg-gradient-to-r after:from-transparent after:from-5% after:to-black after:to-90% sm:gap-3 sm:before:w-36 sm:after:w-36 ${thisPage?.styles?.bgColorSection}`}
+          className={`flex h-full flex-col items-center justify-center gap-1.5 rounded-md px-6 py-3 ${thisPage?.styles?.bgColorSection}`}
           initial={{ opacity: 0, y: -25, scale: 0.8 }}
           animate={{
             opacity: 1,
