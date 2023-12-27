@@ -18,7 +18,7 @@ const pageMains = [
   {
     page: "Projects",
     main: {
-      heading: "Front-to-Back",
+      heading: "I'm your dev.",
       subheading:
         "I build software that enhances people's lives and work. Here are some of my projects I've found to be most impactful.",
     },
@@ -37,6 +37,14 @@ const pageMains = [
       heading: "Let's connect.",
       subheading:
         "Shoot me an email and let's get started. I'll get back to you as soon as I can.",
+    },
+  },
+  {
+    page: "Success",
+    main: {
+      heading: "Roger that.",
+      subheading:
+        "Thanks for reaching out. I'll get back to you as soon as I can. Looking forward to connecting.",
     },
   },
 ];

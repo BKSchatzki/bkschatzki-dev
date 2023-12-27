@@ -7,11 +7,16 @@ import { motion } from "framer-motion";
 const ContactForm = () => {
   return (
     <motion.form
+      name="contact"
+      action="/success"
+      // method="POST"
+      // data-netlify="true"
       className="mt-6 flex w-full flex-col items-center justify-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.1 + 0.15 } }}
       exit={{ opacity: 0 }}
     >
+      <input type="hidden" name="contact" value="contact" />
       <motion.label
         className="w-full"
         initial={{ opacity: 0, y: -25, scale: 0.8 }}

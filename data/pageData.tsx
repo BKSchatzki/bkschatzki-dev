@@ -20,6 +20,9 @@ const pageData = [
   {
     page: "Contact",
   },
+  {
+    page: "Success",
+  },
 ];
 
 export default pageData.map((element) => {
