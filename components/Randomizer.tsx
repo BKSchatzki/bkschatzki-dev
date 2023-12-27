@@ -11,13 +11,20 @@ const Randomizer = ({ page }: { page: String }) => {
     (e) => e.type === "randomizer",
   );
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [lastTwoIndexes, setLastTwoIndexes] = useState([0, 0]);
   const [selectedItem, setSelectedItem] = useState(thisRandomizer?.items[0]);
 
   const handleClick = () => {
-    const randomIndex = Math.floor(
-      Math.random() * (thisRandomizer?.items.length ?? 0),
-    );
-    setSelectedItem(thisRandomizer?.items[randomIndex]);
+    let newIndex;
+    do {
+      newIndex = Math.floor(
+        Math.random() * (thisRandomizer?.items.length ?? 0),
+      );
+    } while ([currentIndex, ...lastTwoIndexes].includes(newIndex));
+    setCurrentIndex(newIndex);
+    setLastTwoIndexes([currentIndex, lastTwoIndexes[0]]);
+    setSelectedItem(thisRandomizer?.items[newIndex]);
   };
 
   return (
@@ -30,17 +37,17 @@ const Randomizer = ({ page }: { page: String }) => {
       <AnimatePresence mode="popLayout">
         <motion.section
           key={selectedItem?.heading}
-          className={`flex h-full flex-col items-center justify-center gap-1.5 rounded-md px-6 py-3 before:absolute before:-left-4 before:top-0 before:h-full before:w-36 before:bg-gradient-to-l before:from-transparent before:from-5% before:to-black before:to-90% after:absolute after:-right-4 after:top-0 after:h-full after:w-36 after:bg-gradient-to-r after:from-transparent after:from-5% after:to-black after:to-90% sm:gap-3 ${thisPage?.styles?.bgColorSection}`}
-          initial={{ opacity: 0, x: -250, scale: 0.8 }}
+          className={`flex h-full flex-col items-center justify-center gap-1.5 rounded-md px-6 py-3 before:absolute before:left-0 before:top-0 before:h-full before:w-24 before:bg-gradient-to-l before:from-transparent before:from-5% before:to-black before:to-90% after:absolute after:right-0 after:top-0 after:h-full after:w-24 after:bg-gradient-to-r after:from-transparent after:from-5% after:to-black after:to-90% sm:gap-3 sm:before:w-36 sm:after:w-36 ${thisPage?.styles?.bgColorSection}`}
+          initial={{ opacity: 0, y: -25, scale: 0.8 }}
           animate={{
             opacity: 1,
-            x: 0,
+            y: 0,
             scale: 1,
             transition: { delay: 0.1 + 0.15 },
           }}
           exit={{
             opacity: 0,
-            x: 500,
+            y: -25,
             scale: 0.8,
             transition: { ease: "anticipate" },
           }}
