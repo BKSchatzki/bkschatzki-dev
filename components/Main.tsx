@@ -28,7 +28,7 @@ const Main = ({ page }: { page: string }) => {
           {thisPage?.main?.heading}
         </motion.h1>
         <motion.p
-          className="text-balance pt-6 sm:pt-10"
+          className="mt-6 text-balance sm:mt-10"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1, transition: { delay: 0 + 0.15 } }}
           exit={{ opacity: 0, scale: 0.8 }}

@@ -80,7 +80,7 @@ const ContactForm = () => {
 
       <motion.button
         type="submit"
-        className="mt-3 rounded-md bg-neutral-300 px-4 py-2 text-xl font-bold text-black focus:outline-neutral-300 sm:mt-6 sm:px-6 sm:py-3 sm:text-3xl"
+        className="mt-6 rounded-md bg-neutral-300 px-4 py-2 text-xl font-bold text-black sm:mt-10 sm:px-6 sm:py-3 sm:text-3xl"
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,

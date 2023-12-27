@@ -18,7 +18,7 @@ const Carousel = ({ page }: { page: String }) => {
       {thisCarousel?.items.map((item, index) => (
         <motion.section
           key={index}
-          className={`carousel-item h-[67.666667%] flex-col items-center justify-center gap-3 rounded-md px-6 py-3 ${thisPage?.styles?.bgColorSectionGradient}`}
+          className={`carousel-item h-[67.666667%] flex-col items-center justify-center gap-1.5 rounded-md px-6 py-3 sm:gap-3 ${thisPage?.styles?.bgColorSectionGradient}`}
           initial={{ opacity: 0, y: -25, scale: 0.1 }}
           animate={{
             opacity: 1,

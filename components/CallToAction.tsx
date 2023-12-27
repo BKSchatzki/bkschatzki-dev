@@ -29,7 +29,7 @@ const CallToAction = ({ linkedPages }: { linkedPages: string[] }) => {
         >
           <Link
             href={page.navLink?.href || "/"}
-            className={`m-1 flex w-full flex-col rounded-md px-4 py-2 text-black sm:px-6 sm:py-3 ${page.styles?.bgColorAccent}`}
+            className={`flex w-full flex-col rounded-md px-4 py-2 text-black sm:px-6 sm:py-3 ${page.styles?.bgColorAccent}`}
           >
             <span className="text-xl font-bold sm:text-3xl">
               {page.navLink?.name}

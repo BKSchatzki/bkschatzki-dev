@@ -28,7 +28,7 @@ const pageMains = [
     main: {
       heading: "Who am I?",
       subheading:
-        "My story is long and winding. Here's the short version. I'm a web developer, a musician, and a traveler. I'm a husband and a father. I'm a Christian. I'm a learner. I'm a teacher. I'm a friend. I'm a son. I'm a brother. I'm a human. I'm a work in progress.",
+        "A life story is hard to fit into a single <p> tag. Tap the button below until either we're best friends or you're tired of me.",
     },
   },
   {

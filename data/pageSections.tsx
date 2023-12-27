@@ -53,7 +53,47 @@ const pageSections = [
   },
   {
     page: "About",
-    sections: [],
+    sections: [
+      {
+        type: "randomizer",
+        heading: "Random Facts",
+        subheading: "",
+        items: [
+          {
+            heading: "Random Fact 1",
+            subheading:
+              "This is a random fact about me. I'm a pretty cool guy.",
+            image: "",
+            imageAlt: "",
+            media: "",
+          },
+          {
+            heading: "Random Fact 2",
+            subheading:
+              "This is a random fact about me. I'm a pretty cool guy.",
+            image: "",
+            imageAlt: "",
+            media: "",
+          },
+          {
+            heading: "Random Fact 3",
+            subheading:
+              "This is a random fact about me. I'm a pretty cool guy.",
+            image: "",
+            imageAlt: "",
+            media: "",
+          },
+          {
+            heading: "Random Fact 4",
+            subheading:
+              "This is a random fact about me. I'm a pretty cool guy.",
+            image: "",
+            imageAlt: "",
+            media: "",
+          },
+        ],
+      },
+    ],
   },
   {
     page: "Contact",
