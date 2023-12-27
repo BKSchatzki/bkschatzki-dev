@@ -60,33 +60,49 @@ const pageSections = [
         subheading: "",
         items: [
           {
-            heading: "Random Fact 1",
+            heading: "Long Story Short",
             subheading:
-              "This is a random fact about me. I'm a pretty cool guy.",
+              "I'm a full stack developer, gamer, musician, teacher, trainer, traveler, and much more.",
             image: "",
             imageAlt: "",
             media: "",
           },
           {
-            heading: "Random Fact 2",
+            heading: "Summers in Paradise",
             subheading:
-              "This is a random fact about me. I'm a pretty cool guy.",
+              "In between high school years I stayed in my grandparents' riverside condo in Bangkok, spending my days swimming and redoing the styles on my MySpace page.",
             image: "",
             imageAlt: "",
             media: "",
           },
           {
-            heading: "Random Fact 3",
+            heading: "Baby Steps",
             subheading:
-              "This is a random fact about me. I'm a pretty cool guy.",
+              "The first programs I ever wrote were a calculator, grocery tracker, and grade calculator, which was used to determine that I didn't need to do that class's final project to pass it with a 3.3 GPA.",
             image: "",
             imageAlt: "",
             media: "",
           },
           {
-            heading: "Random Fact 4",
+            heading: "The Startup",
             subheading:
-              "This is a random fact about me. I'm a pretty cool guy.",
+              'Out of university, I contributed to an augmented reality monster training game startup with seed funding from an accelerator. When Pokémon GO came out, we called it "market validation."',
+            image: "",
+            imageAlt: "",
+            media: "",
+          },
+          {
+            heading: "Tabletop",
+            subheading:
+              "I'm a huge fan of tabletop gaming. I'm always in a D&D or Pathfinder campaign, either as a player or a DM. I've even been in a few adventures recorded for Twitch and YouTube.",
+            image: "",
+            imageAlt: "",
+            media: "",
+          },
+          {
+            heading: "YouTube Channel",
+            subheading:
+              "I used to have a gaming YouTube channel. I pivoted to vlogging when my internet issues in China made collaboration with friends in the US nearly impossible. I stopped when work got too busy.",
             image: "",
             imageAlt: "",
             media: "",

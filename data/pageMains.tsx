@@ -28,7 +28,7 @@ const pageMains = [
     main: {
       heading: "Who am I?",
       subheading:
-        "A life story is hard to fit into a single <p> tag. Tap the button below until either we're best friends or you're tired of me.",
+        "A life story is hard to fit into a single <p> tag. Tap the button below until either we're best friends or we reach Earth.",
     },
   },
   {
