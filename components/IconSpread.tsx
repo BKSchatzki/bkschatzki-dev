@@ -12,7 +12,7 @@ const IconSpread = ({ page }: { page: string }) => {
 
   return (
     <motion.ul
-      className={`mt-6 grid w-full grid-cols-12 items-center justify-center gap-3 rounded-md p-3 sm:gap-6 sm:p-6 ${thisPage?.styles?.bgColorBase}`}
+      className={`mt-6 grid w-full grid-cols-12 items-center justify-center gap-3 rounded-md p-3 sm:mt-10 sm:gap-6 sm:p-6 ${thisPage?.styles?.bgColorBase}`}
       initial={{ opacity: 0, y: -25, scale: 0.8 }}
       animate={{
         opacity: 1,
