@@ -1,6 +1,6 @@
 import Starfield from "./components/Starfield";
-// import Header from "./components/Header";
-// import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import PageWrapper from "./components/PageWrapper";
 
 import Home from "./pages/Home";
@@ -23,8 +23,8 @@ const App: React.FC<Props> = ({ children }) => {
         speedFactor={0.05}
         backgroundColor="black"
       />
-      {/* <Header />
-      <Footer /> */}
+      <Header />
+      <Footer />
       <PageWrapper>
         {children}
         <Home />
