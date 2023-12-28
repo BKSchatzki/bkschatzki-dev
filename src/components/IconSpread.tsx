@@ -36,11 +36,11 @@ const IconSpread = ({ page }: { page: string }) => {
           exit={{ opacity: 0, y: -25, scale: 0.1 }}
         >
           <a href={icon.href} target="_blank" rel="noopener noreferrer">
-            {/* <Image
+            <img
               src={icon.src}
               alt={icon.alt}
               className="h-8 w-8 sm:h-12 sm:w-12"
-            /> */}
+            />
           </a>
         </motion.li>
       ))}
