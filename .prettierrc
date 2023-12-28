@@ -1,6 +1,0 @@
-{
-  "plugins": ["prettier-plugin-tailwindcss"],
-  "pluginSearchDirs": false,
-  "tabWidth": 2,
-  "useTabs": false
-}
