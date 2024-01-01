@@ -10,8 +10,8 @@ interface Props {
 
 export default function Starfield(props: Props) {
   const {
-    speedFactor = 0.05,
     backgroundColor = "black",
+    speedFactor = 0.05,
     starColor = [255, 255, 255],
     starCount = 5000,
   } = props;
@@ -151,14 +151,13 @@ export default function Starfield(props: Props) {
         right: 0,
         bottom: 0,
         left: 0,
-        zIndex: 10,
+        zIndex: -10,
         opacity: 0.25,
         pointerEvents: "none",
         mixBlendMode: "screen",
       }}
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
-      // transition={{ duration: 0.2 }}
     ></motion.canvas>
   );
 }

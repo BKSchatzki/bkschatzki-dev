@@ -15,10 +15,10 @@ const App = () => {
   return (
     <Router>
       <Starfield
-        starCount={1000}
-        starColor={[255, 255, 255]}
-        speedFactor={0.05}
         backgroundColor="black"
+        speedFactor={0.05}
+        starColor={[255, 255, 255]}
+        starCount={1000}
       />
       <Header />
       <PageWrapper>
