@@ -7,8 +7,8 @@ const ContactForm = () => {
     <motion.form
       name="contact"
       action="/success"
-      // method="POST"
-      // data-netlify="true"
+      method="POST"
+      data-netlify="true"
       className="mt-6 flex w-full flex-col items-center justify-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.1 + 0.15 } }}
