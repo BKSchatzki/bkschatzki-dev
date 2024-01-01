@@ -22,7 +22,7 @@ const Carousel = ({ page }: { page: string }) => {
             opacity: 1,
             y: 0,
             scale: 1,
-            transition: { delay: 0.1 + 0.15 + 0.1 * index },
+            transition: { delay: 0.15 + 0.1 + 0.15 + 0.1 * index },
           }}
           exit={{ opacity: 0, y: -25, scale: 0.1 }}
         >
