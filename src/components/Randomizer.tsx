@@ -9,9 +9,10 @@ const Randomizer = ({ page }: { page: string }) => {
     (e) => e.type === "randomizer"
   );
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [lastTwoIndexes, setLastTwoIndexes] = useState([0, 0]);
   const [selectedItem, setSelectedItem] = useState(thisRandomizer?.items[0]);
+  const [visitedIndexes, setVisitedIndexes] = useState(
+    new Array(thisRandomizer?.items.length).fill(false).map((_, i) => i === 0)
+  );
 
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -22,12 +23,16 @@ const Randomizer = ({ page }: { page: string }) => {
       newIndex = Math.floor(
         Math.random() * (thisRandomizer?.items.length ?? 0)
       );
-    } while (
-      [currentIndex, ...lastTwoIndexes].includes(newIndex) ||
-      newIndex === 0
-    );
-    setCurrentIndex(newIndex);
-    setLastTwoIndexes([currentIndex, lastTwoIndexes[0]]);
+    } while (visitedIndexes[newIndex]);
+    const newVisitedIndexes = [...visitedIndexes];
+    newVisitedIndexes[newIndex] = true;
+    setVisitedIndexes(newVisitedIndexes);
+
+    const allVisited = newVisitedIndexes.every((e) => e);
+    if (allVisited) {
+      setVisitedIndexes(new Array(thisRandomizer?.items.length).fill(false));
+    }
+
     setSelectedItem(thisRandomizer?.items[newIndex]);
   };
 
