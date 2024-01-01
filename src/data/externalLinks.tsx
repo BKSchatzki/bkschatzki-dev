@@ -6,7 +6,7 @@ const externalLinks = [
     links: [
       {
         name: "GitHub",
-        url: "#",
+        url: "https://github.com/BKSchatzki",
         icon: (
           <>
             <Github size={16} className="block text-neutral-500 sm:hidden" />
@@ -16,7 +16,7 @@ const externalLinks = [
       },
       {
         name: "LinkedIn",
-        url: "#",
+        url: "https://www.linkedin.com/in/bkschatzki/",
         icon: (
           <>
             <Linkedin
@@ -32,7 +32,7 @@ const externalLinks = [
       },
       {
         name: "Twitter",
-        url: "#",
+        url: "https://twitter.com/bkschatzki",
         icon: (
           <>
             <Twitter
@@ -48,7 +48,7 @@ const externalLinks = [
       },
       {
         name: "Instagram",
-        url: "#",
+        url: "https://www.instagram.com/bkschatzki/",
         icon: (
           <>
             <Instagram
@@ -64,7 +64,7 @@ const externalLinks = [
       },
       {
         name: "YouTube",
-        url: "#",
+        url: "https://www.youtube.com/channel/UCBtQ9HQ990E2k21RjmOMUfQ",
         icon: (
           <>
             <Youtube
