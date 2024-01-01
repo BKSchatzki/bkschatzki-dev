@@ -29,6 +29,7 @@ const ContactForm = () => {
         <span className="sr-only">Name:</span>
         <input
           type="text"
+          name="name"
           placeholder="Name:"
           required
           className="w-full border-b-2 border-neutral-500 bg-transparent py-1.5 placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none sm:text-lg"
@@ -49,6 +50,7 @@ const ContactForm = () => {
         <span className="sr-only">Email:</span>
         <input
           type="email"
+          name="email"
           placeholder="Email:"
           required
           className="w-full border-b-2 border-neutral-500 bg-transparent py-1.5 placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none sm:text-lg"
@@ -70,6 +72,7 @@ const ContactForm = () => {
         <TextareaAutosize
           minRows={1}
           maxRows={12}
+          name="message"
           placeholder="Message:"
           required
           className="w-full resize-none overflow-y-scroll border-b-2 border-neutral-500 bg-transparent py-1.5 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-neutral-400 placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none sm:text-lg"
