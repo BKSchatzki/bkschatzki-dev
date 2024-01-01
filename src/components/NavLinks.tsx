@@ -23,7 +23,7 @@ const NavLinks = ({
       {navType === "drawerMenu" && isMenuOpen && (
         <motion.ul
           key="backdrop"
-          className="fixed top-0 flex min-h-[100dvh] w-screen flex-col items-center justify-center gap-6 bg-black bg-opacity-80 bg-clip-padding text-center backdrop-blur-md backdrop-filter sm:gap-10"
+          className="fixed top-0 z-10 flex min-h-[100dvh] w-screen flex-col items-center justify-center gap-6 bg-black bg-opacity-80 bg-clip-padding text-center backdrop-blur-md backdrop-filter sm:gap-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { delay: 0.25 } }}
@@ -82,7 +82,7 @@ const NavLinks = ({
                 {location.pathname === page.navLink?.href && (
                   <motion.div
                     layoutId="iconRowUnderline"
-                    className={`absolute left-[-25%] top-[110%] h-[3px] w-[150%] ${page.styles?.bgColorAccent}`}
+                    className={`absolute left-[-25%] top-[110%] z-10 h-[3px] w-[150%] ${page.styles?.bgColorAccent}`}
                   />
                 )}
               </Link>
