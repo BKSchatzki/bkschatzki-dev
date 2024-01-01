@@ -1,14 +1,50 @@
 import TextareaAutosize from "react-textarea-autosize";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { redirect } from "react-router-dom";
 
 const ContactForm = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  // const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          "form-name": "contact",
+          name,
+          email,
+          message,
+        }).toString(),
+      });
+      if (response.ok) {
+        // setIsSubmitted(true);
+        redirect("/success");
+        // setName("");
+        // setEmail("");
+        // setMessage("");
+      } else {
+        console.error("Form submission failed:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+    }
+  };
+
   return (
     <motion.form
       name="contact"
-      action="/success"
-      method="POST"
-      data-netlify="true"
+      // action="/success"
+      // method="POST"
+      // data-netlify="true"
+      onSubmit={handleSubmit}
       className="mt-6 flex w-full flex-col items-center justify-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.1 + 0.15 } }}
@@ -32,6 +68,8 @@ const ContactForm = () => {
           name="name"
           placeholder="Name:"
           required
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           className="w-full border-b-2 border-neutral-500 bg-transparent py-1.5 placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none sm:text-lg"
         />
       </motion.label>
@@ -53,6 +91,8 @@ const ContactForm = () => {
           name="email"
           placeholder="Email:"
           required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           className="w-full border-b-2 border-neutral-500 bg-transparent py-1.5 placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none sm:text-lg"
         />
       </motion.label>
@@ -75,6 +115,8 @@ const ContactForm = () => {
           name="message"
           placeholder="Message:"
           required
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
           className="w-full resize-none overflow-y-scroll border-b-2 border-neutral-500 bg-transparent py-1.5 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-neutral-400 placeholder:text-neutral-500 focus:border-neutral-300 focus:outline-none sm:text-lg"
         />
       </motion.label>
