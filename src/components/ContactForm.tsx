@@ -14,7 +14,7 @@ const ContactForm = () => {
       animate={{ opacity: 1, transition: { delay: 0.1 + 0.15 } }}
       exit={{ opacity: 0 }}
     >
-      <input type="hidden" name="contact" value="contact" />
+      <input type="hidden" name="form-name" value="contact" />
       <motion.label
         className="w-full"
         initial={{ opacity: 0, y: -25, scale: 0.8 }}
