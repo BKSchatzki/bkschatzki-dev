@@ -1,6 +1,6 @@
 import TextareaAutosize from "react-textarea-autosize";
 
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -8,7 +8,7 @@ const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  // const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitIsFailed, setSubmitIsFailed] = useState(false);
 
   const navigate = useNavigate();
 
@@ -16,7 +16,7 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("/", {
+      const res = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({
@@ -26,26 +26,23 @@ const ContactForm = () => {
           message,
         }).toString(),
       });
-      if (response.ok) {
-        // setIsSubmitted(true);
+      if (res.ok) {
         navigate("/success");
-        // setName("");
-        // setEmail("");
-        // setMessage("");
       } else {
-        console.error("Form submission failed:", response.statusText);
+        setSubmitIsFailed(true);
+        console.error("Form submission failed:", res.statusText);
+        setTimeout(() => setSubmitIsFailed(false), 5000);
       }
     } catch (error) {
+      setSubmitIsFailed(true);
       console.error("Form submission error:", error);
+      setTimeout(() => setSubmitIsFailed(false), 5000);
     }
   };
 
   return (
     <motion.form
       name="contact"
-      // action="/success"
-      // method="POST"
-      // data-netlify="true"
       onSubmit={handleSubmit}
       className="mt-6 flex w-full flex-col items-center justify-center"
       initial={{ opacity: 0 }}
@@ -125,7 +122,10 @@ const ContactForm = () => {
 
       <motion.button
         type="submit"
-        className="mt-6 rounded-md bg-neutral-300 px-4 py-2 text-xl font-bold text-black sm:mt-10 sm:px-6 sm:py-3 sm:text-3xl"
+        disabled={submitIsFailed}
+        className={`mt-6 rounded-md px-4 py-2 text-xl font-bold text-black sm:mt-10 sm:px-6 sm:py-3 sm:text-3xl w-1/3 transition ${
+          submitIsFailed ? "bg-neutral-600 scale-95 rotate-6" : "bg-neutral-300"
+        }`}
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
@@ -133,8 +133,30 @@ const ContactForm = () => {
         }}
         exit={{ opacity: 0 }}
       >
-        Send
+        {submitIsFailed ? "Oops" : "Send"}
       </motion.button>
+      <AnimatePresence mode="wait">
+        {submitIsFailed && (
+          <motion.span
+            className="text-base sm:text-xl flex h-16 items-center justify-center sm:h-24 fixed bottom-0 font-semibold text-red-500"
+            initial={{ opacity: 0, x: -250, scale: 0.8 }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              scale: 1,
+              transition: { delay: 0.15 },
+            }}
+            exit={{
+              opacity: 0,
+              x: 500,
+              scale: 0.8,
+              transition: { ease: "anticipate" },
+            }}
+          >
+            We have a problem. Please try again.
+          </motion.span>
+        )}
+      </AnimatePresence>
     </motion.form>
   );
 };
