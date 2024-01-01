@@ -2,13 +2,15 @@ import TextareaAutosize from "react-textarea-autosize";
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   // const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -26,7 +28,7 @@ const ContactForm = () => {
       });
       if (response.ok) {
         // setIsSubmitted(true);
-        return redirect("/success");
+        navigate("/success");
         // setName("");
         // setEmail("");
         // setMessage("");
