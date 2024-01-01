@@ -6,7 +6,7 @@ const ContactForm = () => {
   return (
     <form
       name="contact"
-      action="/success"
+      action="/"
       method="POST"
       data-netlify="true"
       className="mt-6 flex w-full flex-col items-center justify-center"
