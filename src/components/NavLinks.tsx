@@ -1,6 +1,6 @@
 import pageData from "../data/pageData";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import { MouseEventHandler } from "react";
@@ -14,6 +14,8 @@ const NavLinks = ({
   navType: string;
   isMenuOpen: boolean;
 }) => {
+  const location = useLocation();
+
   return (
     <>
       {navType === "drawerMenu" && isMenuOpen && (
@@ -48,9 +50,11 @@ const NavLinks = ({
                   >
                     {page.navLink?.name}
                   </span>
-                  <div
-                    className={`absolute top-[57%] h-[3px] w-full sm:top-[61%] ${page.styles?.bgColorAccent}`}
-                  />
+                  {location.pathname === page.navLink?.href && (
+                    <div
+                      className={`absolute top-[57%] h-[3px] w-full sm:top-[61%] ${page.styles?.bgColorAccent}`}
+                    />
+                  )}
                   <span className="sm:text-xl">
                     {page.navLink?.description}
                   </span>
@@ -72,10 +76,12 @@ const NavLinks = ({
             >
               <Link to={page.navLink?.href || "/"} className={"relative"}>
                 <span className={page.styles?.textColor}>{page.icon}</span>
-                <motion.div
-                  layoutId="iconRowUnderline"
-                  className={`absolute left-[-25%] top-[110%] h-[3px] w-[150%] ${page.styles?.bgColorAccent}`}
-                />
+                {location.pathname === page.navLink?.href && (
+                  <motion.div
+                    layoutId="iconRowUnderline"
+                    className={`absolute left-[-25%] top-[110%] h-[3px] w-[150%] ${page.styles?.bgColorAccent}`}
+                  />
+                )}
               </Link>
             </motion.li>
           ))}
