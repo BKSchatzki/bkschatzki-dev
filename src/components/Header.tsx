@@ -1,5 +1,3 @@
-"use client";
-
 import NavLinks from "./NavLinks";
 import { Menu, X } from "lucide-react";
 

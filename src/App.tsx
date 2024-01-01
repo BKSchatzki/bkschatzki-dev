@@ -1,3 +1,5 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Starfield from "./components/Starfield";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -8,15 +10,10 @@ import Services from "./pages/Services";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import React from "react";
 
-type Props = {
-  children?: React.ReactNode;
-};
-
-const App: React.FC<Props> = ({ children }) => {
+const App = () => {
   return (
-    <div>
+    <Router>
       <Starfield
         starCount={1000}
         starColor={[255, 255, 255]}
@@ -26,14 +23,15 @@ const App: React.FC<Props> = ({ children }) => {
       <Header />
       <Footer />
       <PageWrapper>
-        {children}
-        <Home />
-        <Services />
-        <Projects />
-        <About />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </PageWrapper>
-    </div>
+    </Router>
   );
 };
 
