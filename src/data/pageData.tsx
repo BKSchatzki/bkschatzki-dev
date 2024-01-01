@@ -29,10 +29,10 @@ const filledPageData = emptyPageData.map((element) => {
   const icons = pageIcons.find((icon) => icon.page === element.page);
   const mains = pageMains.find((main) => main.page === element.page);
   const navLinks = pageNavLinks.find(
-    (navLink) => navLink.page === element.page
+    (navLink) => navLink.page === element.page,
   );
   const sections = pageSections.find(
-    (section) => section.page === element.page
+    (section) => section.page === element.page,
   );
   const styles = pageStyles.find((style) => style.page === element.page);
   return {

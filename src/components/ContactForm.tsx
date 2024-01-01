@@ -123,8 +123,8 @@ const ContactForm = () => {
       <motion.button
         type="submit"
         disabled={submitIsFailed}
-        className={`mt-6 rounded-md px-4 py-2 text-xl font-bold text-black sm:mt-10 sm:px-6 sm:py-3 sm:text-3xl w-1/3 transition ${
-          submitIsFailed ? "bg-neutral-600 scale-95 rotate-6" : "bg-neutral-300"
+        className={`mt-6 w-1/3 rounded-md px-4 py-2 text-xl font-bold text-black transition sm:mt-10 sm:px-6 sm:py-3 sm:text-3xl ${
+          submitIsFailed ? "rotate-6 scale-95 bg-neutral-600" : "bg-neutral-300"
         }`}
         initial={{ opacity: 0 }}
         animate={{
@@ -138,7 +138,7 @@ const ContactForm = () => {
       <AnimatePresence mode="wait">
         {submitIsFailed && (
           <motion.span
-            className="text-base sm:text-xl flex h-16 items-center justify-center sm:h-24 fixed bottom-0 font-semibold text-red-500"
+            className="fixed bottom-0 flex h-16 items-center justify-center text-base font-semibold text-red-500 sm:h-24 sm:text-xl"
             initial={{ opacity: 0, x: -250, scale: 0.8 }}
             animate={{
               opacity: 1,

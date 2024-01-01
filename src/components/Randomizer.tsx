@@ -6,12 +6,12 @@ import { useRef, useState } from "react";
 const Randomizer = ({ page }: { page: string }) => {
   const thisPage = pageData.find((e) => e.page === page);
   const thisRandomizer = thisPage?.sections?.find(
-    (e) => e.type === "randomizer"
+    (e) => e.type === "randomizer",
   );
 
   const [selectedItem, setSelectedItem] = useState(thisRandomizer?.items[0]);
   const [visitedIndexes, setVisitedIndexes] = useState(
-    new Array(thisRandomizer?.items.length).fill(false).map((_, i) => i === 0)
+    new Array(thisRandomizer?.items.length).fill(false).map((_, i) => i === 0),
   );
 
   const ref = useRef(null);
@@ -21,7 +21,7 @@ const Randomizer = ({ page }: { page: string }) => {
     let newIndex;
     do {
       newIndex = Math.floor(
-        Math.random() * (thisRandomizer?.items.length ?? 0)
+        Math.random() * (thisRandomizer?.items.length ?? 0),
       );
     } while (visitedIndexes[newIndex]);
     const newVisitedIndexes = [...visitedIndexes];

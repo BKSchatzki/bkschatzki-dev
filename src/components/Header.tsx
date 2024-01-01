@@ -17,7 +17,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed z-10 h-16 w-full bg-gradient-to-b from-black sm:from-90% to-transparent sm:to-100% sm:h-24">
+    <header className="fixed z-10 h-16 w-full bg-gradient-to-b from-black to-transparent sm:h-24 sm:from-90% sm:to-100%">
       <nav
         className={`relative flex flex-col items-center justify-center ${
           isMenuOpen ? "h-screen" : "h-full"
