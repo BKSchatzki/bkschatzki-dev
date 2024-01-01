@@ -1,9 +1,7 @@
-"use client";
-
 import pageData from "../data/pageData";
 
-import { useState, useRef } from "react";
-import { motion, AnimatePresence, useInView } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
+import { useRef, useState } from "react";
 
 const Randomizer = ({ page }: { page: string }) => {
   const thisPage = pageData.find((e) => e.page === page);

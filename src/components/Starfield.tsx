@@ -1,7 +1,5 @@
-"use client";
-
-import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 interface Props {
   speedFactor?: number;
@@ -52,7 +50,7 @@ export default function Starfield(props: Props) {
           return out;
         };
 
-        let stars = makeStars(starCount);
+        const stars = makeStars(starCount);
 
         const clear = () => {
           c.fillStyle = backgroundColor;
@@ -76,7 +74,7 @@ export default function Starfield(props: Props) {
 
         const moveStars = (distance: number) => {
           const count = stars.length;
-          for (var i = 0; i < count; i++) {
+          for (let i = 0; i < count; i++) {
             const s = stars[i];
             s.z -= distance;
             while (s.z <= 1) {
@@ -92,7 +90,7 @@ export default function Starfield(props: Props) {
         };
 
         const tick = (time: number) => {
-          let elapsed = time - prevTime;
+          const elapsed = time - prevTime;
           prevTime = time;
 
           moveStars(elapsed * speedFactor);
@@ -103,7 +101,7 @@ export default function Starfield(props: Props) {
           const cy = h / 2;
 
           const count = stars.length;
-          for (var i = 0; i < count; i++) {
+          for (let i = 0; i < count; i++) {
             const star = stars[i];
 
             const x = cx + star.x / (star.z * 0.001);

@@ -1,10 +1,8 @@
-"use client";
-
 import pageData from "../data/pageData";
 
 import { motion } from "framer-motion";
 
-const Carousel = ({ page }: { page: String }) => {
+const Carousel = ({ page }: { page: string }) => {
   const thisPage = pageData.find((e) => e.page === page);
   const thisCarousel = thisPage?.sections?.find((e) => e.type === "carousel");
 

@@ -1,8 +1,8 @@
 import NavLinks from "./NavLinks";
 import { Menu, X } from "lucide-react";
 
-import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

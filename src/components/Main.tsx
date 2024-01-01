@@ -1,5 +1,3 @@
-"use client";
-
 import pageData from "../data/pageData";
 
 import { motion } from "framer-motion";

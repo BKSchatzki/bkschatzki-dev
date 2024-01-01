@@ -1,9 +1,5 @@
-"use client";
-
 import pageData from "../data/pageData";
 import techIcons from "../data/techIcons";
-
-// import Image from "next/image";
 
 import { motion } from "framer-motion";
 

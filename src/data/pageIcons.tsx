@@ -1,9 +1,9 @@
 import {
-  Home,
-  HelpCircle,
   FolderOpenDot,
-  SquareUser,
+  HelpCircle,
+  Home,
   Send,
+  SquareUser,
 } from "lucide-react";
 
 const pageIcons = [

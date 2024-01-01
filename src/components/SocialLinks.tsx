@@ -1,5 +1,3 @@
-"use client";
-
 import externalLinks from "../data/externalLinks";
 
 import { motion } from "framer-motion";

@@ -1,7 +1,7 @@
 import pageData from "../data/pageData";
 
-import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Link, useLocation } from "react-router-dom";
 
 import { MouseEventHandler } from "react";
 

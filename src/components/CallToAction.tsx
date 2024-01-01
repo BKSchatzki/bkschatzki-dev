@@ -2,8 +2,8 @@ import pageData from "../data/pageData";
 
 import { Link } from "react-router-dom";
 
-import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const CallToAction = ({ linkedPages }: { linkedPages: string[] }) => {
   const thesePages = pageData.filter((e) => linkedPages.includes(e.page));
