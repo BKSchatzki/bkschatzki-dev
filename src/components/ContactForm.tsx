@@ -26,7 +26,7 @@ const ContactForm = () => {
       });
       if (response.ok) {
         // setIsSubmitted(true);
-        redirect("/success");
+        return redirect("/success");
         // setName("");
         // setEmail("");
         // setMessage("");
