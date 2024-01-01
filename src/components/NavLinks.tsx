@@ -1,5 +1,7 @@
 import pageData from "../data/pageData";
 
+import SocialLinks from "./SocialLinks";
+
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 
@@ -62,6 +64,7 @@ const NavLinks = ({
               </Link>
             </motion.li>
           ))}
+          <SocialLinks />
         </motion.ul>
       )}
       {navType === "iconRow" && !isMenuOpen && (

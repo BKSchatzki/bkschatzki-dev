@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Starfield from "./components/Starfield";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import PageWrapper from "./components/PageWrapper";
 
 import Home from "./pages/Home";
@@ -21,7 +20,6 @@ const App = () => {
         backgroundColor="black"
       />
       <Header />
-      <Footer />
       <PageWrapper>
         <Routes>
           <Route path="/" element={<Home />} />
