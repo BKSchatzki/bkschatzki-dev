@@ -7,12 +7,7 @@ const Carousel = ({ page }: { page: string }) => {
   const thisCarousel = thisPage?.sections?.find((e) => e.type === "carousel");
 
   return (
-    <motion.article
-      className="carousel carousel-vertical mt-6 h-48 w-full space-y-3 rounded-md sm:mt-10 sm:h-96 sm:space-y-5"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { delay: 0.1 + 0.15 } }}
-      exit={{ opacity: 0 }}
-    >
+    <article className="carousel carousel-vertical mt-6 h-48 w-full space-y-3 rounded-md sm:mt-10 sm:h-96 sm:space-y-5">
       {thisCarousel?.items.map((item, index) => (
         <motion.section
           key={index}
@@ -32,7 +27,7 @@ const Carousel = ({ page }: { page: string }) => {
           <p className="text-center sm:text-xl">{item.subheading}</p>
         </motion.section>
       ))}
-    </motion.article>
+    </article>
   );
 };
 
