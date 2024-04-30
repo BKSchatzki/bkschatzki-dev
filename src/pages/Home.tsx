@@ -5,8 +5,11 @@ import Main from "../components/Main";
 export default function Home() {
   return (
     <ContentWrapper>
-      <Main page="Home" />
-      <CallToAction linkedPages={["Services", "Projects"]} />
+      <Main page="Home">
+        <CallToAction
+          linkedPages={["Services", "Projects", "About", "Contact"]}
+        />
+      </Main>
     </ContentWrapper>
   );
 }

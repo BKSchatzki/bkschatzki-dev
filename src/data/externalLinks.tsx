@@ -1,4 +1,10 @@
-import { Github, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import {
+  Github,
+  Instagram,
+  Linkedin,
+  Twitter,
+  Youtube,
+} from "lucide-react";
 
 const externalLinks = [
   {

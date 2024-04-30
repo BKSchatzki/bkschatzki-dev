@@ -1,11 +1,13 @@
-import pageData from "../data/pageData";
-
-import SocialLinks from "./SocialLinks";
+import { MouseEventHandler } from "react";
 
 import { motion } from "framer-motion";
-import { Link, useLocation } from "react-router-dom";
+import {
+  Link,
+  useLocation,
+} from "react-router-dom";
 
-import { MouseEventHandler } from "react";
+import pageData from "../data/pageData";
+import SocialLinks from "./SocialLinks";
 
 const NavLinks = ({
   closeMenu,
@@ -30,7 +32,7 @@ const NavLinks = ({
         >
           {pageData.map((page, index) => (
             <motion.li
-              key={index}
+              key={page.page}
               initial={{ opacity: 0, x: -250, scale: 0.1 }}
               animate={{
                 opacity: 1,
@@ -71,7 +73,7 @@ const NavLinks = ({
         <ul className="flex flex-row items-center justify-center gap-8 sm:gap-12">
           {pageData.map((page, index) => (
             <motion.li
-              key={index}
+              key={page.page}
               initial={{ opacity: 0, y: -50, scale: 0.1 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -50, scale: 0.1 }}

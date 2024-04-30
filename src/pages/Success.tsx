@@ -5,8 +5,9 @@ import Main from "../components/Main";
 const About = () => {
   return (
     <ContentWrapper>
-      <Main page="Success" />
-      <CallToAction linkedPages={["Home"]} />
+      <Main page="Success">
+        <CallToAction linkedPages={["Home"]} />
+      </Main>
     </ContentWrapper>
   );
 };

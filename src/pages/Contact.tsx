@@ -5,8 +5,9 @@ import Main from "../components/Main";
 const Contact = () => {
   return (
     <ContentWrapper>
-      <Main page="Contact" />
-      <ContactForm />
+      <Main page="Contact">
+        <ContactForm />
+      </Main>
     </ContentWrapper>
   );
 };

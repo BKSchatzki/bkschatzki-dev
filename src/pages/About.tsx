@@ -6,9 +6,10 @@ import Randomizer from "../components/Randomizer";
 const About = () => {
   return (
     <ContentWrapper>
-      <Main page="About" />
-      <Randomizer page="About" />
-      <CallToAction linkedPages={[]} />
+      <Main page="About">
+        <Randomizer page="About" />
+        <CallToAction linkedPages={[]} />
+      </Main>
     </ContentWrapper>
   );
 };

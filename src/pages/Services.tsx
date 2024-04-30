@@ -6,9 +6,10 @@ import Main from "../components/Main";
 const Services = () => {
   return (
     <ContentWrapper>
-      <Main page="Services" />
-      <Carousel page="Services" />
-      <CallToAction linkedPages={["Contact"]} />
+      <Main page="Services">
+        <Carousel page="Services" />
+        <CallToAction linkedPages={["Contact"]} />
+      </Main>
     </ContentWrapper>
   );
 };

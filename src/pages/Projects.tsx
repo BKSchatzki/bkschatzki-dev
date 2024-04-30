@@ -6,9 +6,10 @@ import Main from "../components/Main";
 const Projects = () => {
   return (
     <ContentWrapper>
-      <Main page="Projects" />
-      <IconSpread page="Projects" />
-      <CallToAction linkedPages={["Contact"]} />
+      <Main page="Projects">
+        <IconSpread page="Projects" />
+        <CallToAction linkedPages={["Contact"]} />
+      </Main>
     </ContentWrapper>
   );
 };

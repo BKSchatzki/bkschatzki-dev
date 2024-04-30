@@ -1,9 +1,12 @@
-import pageData from "../data/pageData";
+import { useRef } from "react";
 
+import {
+  motion,
+  useInView,
+} from "framer-motion";
 import { Link } from "react-router-dom";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import pageData from "../data/pageData";
 
 const CallToAction = ({ linkedPages }: { linkedPages: string[] }) => {
   const thesePages = pageData.filter((e) => linkedPages.includes(e.page));
@@ -13,9 +16,9 @@ const CallToAction = ({ linkedPages }: { linkedPages: string[] }) => {
 
   return (
     <ul className="mt-6 grid w-full grid-cols-12 gap-3 text-center sm:mt-10 sm:gap-4">
-      {thesePages?.map((page, index) => (
+      {thesePages?.map((page) => (
         <motion.li
-          key={index}
+          key={page.page}
           ref={ref}
           className="col-span-6 only:col-start-4"
           initial={{ opacity: 0 }}

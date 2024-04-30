@@ -1,8 +1,7 @@
-import externalLinks from "../data/externalLinks";
-
-import Copyright from "./Copyright";
-
 import { motion } from "framer-motion";
+
+import externalLinks from "../data/externalLinks";
+import Copyright from "./Copyright";
 
 const SocialLinks = () => {
   const socials = externalLinks.find((e) => e.type === "socials");
@@ -12,7 +11,7 @@ const SocialLinks = () => {
       <ul className="flex gap-4 sm:gap-6">
         {socials?.links.map((link, index) => (
           <motion.li
-            key={index}
+            key={link.name}
             initial={{ opacity: 0, y: 50, scale: 0.1 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 50, scale: 0.1 }}

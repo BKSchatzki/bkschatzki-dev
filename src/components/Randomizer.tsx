@@ -1,7 +1,15 @@
-import pageData from "../data/pageData";
+import {
+  useRef,
+  useState,
+} from "react";
 
-import { AnimatePresence, motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import {
+  AnimatePresence,
+  motion,
+  useInView,
+} from "framer-motion";
+
+import pageData from "../data/pageData";
 
 const Randomizer = ({ page }: { page: string }) => {
   const thisPage = pageData.find((e) => e.page === page);

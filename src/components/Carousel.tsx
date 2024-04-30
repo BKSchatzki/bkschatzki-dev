@@ -1,6 +1,6 @@
-import pageData from "../data/pageData";
-
 import { motion } from "framer-motion";
+
+import pageData from "../data/pageData";
 
 const Carousel = ({ page }: { page: string }) => {
   const thisPage = pageData.find((e) => e.page === page);
@@ -10,7 +10,7 @@ const Carousel = ({ page }: { page: string }) => {
     <article className="carousel carousel-vertical mt-6 h-48 w-full space-y-3 rounded-md sm:mt-10 sm:h-96 sm:space-y-5">
       {thisCarousel?.items.map((item, index) => (
         <motion.section
-          key={index}
+          key={item.heading}
           className={`carousel-item h-[67.666667%] flex-col items-center justify-center gap-1.5 rounded-md px-6 py-3 sm:gap-3 ${thisPage?.styles?.bgColorSectionGradient}`}
           initial={{ opacity: 0, y: -25, scale: 0.1 }}
           animate={{

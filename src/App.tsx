@@ -1,14 +1,17 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
 
-import Starfield from "./components/Starfield";
 import Header from "./components/Header";
 import PageWrapper from "./components/PageWrapper";
-
-import Home from "./pages/Home";
-import Services from "./pages/Services";
-import Projects from "./pages/Projects";
+import Starfield from "./components/Starfield";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Services from "./pages/Services";
 import Success from "./pages/Success";
 
 const App = () => {

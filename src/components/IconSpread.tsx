@@ -1,10 +1,13 @@
+import { motion } from "framer-motion";
+
 import pageData from "../data/pageData";
 import techIcons from "../data/techIcons";
 
-import { motion } from "framer-motion";
-
 const IconSpread = ({ page }: { page: string }) => {
   const thisPage = pageData.find((e) => e.page === page);
+  const iconNames = techIcons.map((e) =>
+    e.alt.split(" ").slice(0, -1).join(" "),
+  );
 
   return (
     <motion.ul
@@ -20,7 +23,7 @@ const IconSpread = ({ page }: { page: string }) => {
     >
       {techIcons.map((icon, index) => (
         <motion.li
-          key={index}
+          key={icon.alt}
           className="col-span-2 flex items-center justify-center"
           initial={{ opacity: 0, y: -25, scale: 0.1 }}
           animate={{
@@ -31,7 +34,13 @@ const IconSpread = ({ page }: { page: string }) => {
           }}
           exit={{ opacity: 0, y: -25, scale: 0.1 }}
         >
-          <a href={icon.href} target="_blank" rel="noopener noreferrer">
+          <a
+            href={icon.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="tooltip"
+            data-tip={iconNames[index]}
+          >
             <img
               src={icon.src}
               alt={icon.alt}
