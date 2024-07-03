@@ -2,17 +2,17 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-} from "react-router-dom";
+} from 'react-router-dom';
 
-import Header from "./components/Header";
-import PageWrapper from "./components/PageWrapper";
-import Starfield from "./components/Starfield";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Home from "./pages/Home";
-import Projects from "./pages/Projects";
-import Services from "./pages/Services";
-import Success from "./pages/Success";
+import Header from './components/Header';
+import PageWrapper from './components/PageWrapper';
+import Starfield from './components/Starfield';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import Services from './pages/Services';
+import Success from './pages/Success';
 
 const App = () => {
   return (

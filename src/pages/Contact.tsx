@@ -1,6 +1,6 @@
-import ContactForm from "../components/ContactForm";
-import ContentWrapper from "../components/ContentWrapper";
-import Main from "../components/Main";
+import ContactForm from '../components/ContactForm';
+import ContentWrapper from '../components/ContentWrapper';
+import Main from '../components/Main';
 
 const Contact = () => {
   return (

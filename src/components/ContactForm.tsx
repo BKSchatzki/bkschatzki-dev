@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 import {
   AnimatePresence,
   motion,
-} from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import TextareaAutosize from "react-textarea-autosize";
+} from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import TextareaAutosize from 'react-textarea-autosize';
 
 const ContactForm = () => {
   const [name, setName] = useState("");

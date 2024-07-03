@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-import pageData from "../data/pageData";
-import techIcons from "../data/techIcons";
+import pageData from '../data/pageData';
+import techIcons from '../data/techIcons';
 
 const IconSpread = ({ page }: { page: string }) => {
   const thisPage = pageData.find((e) => e.page === page);

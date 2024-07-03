@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-import pageData from "../data/pageData";
+import pageData from '../data/pageData';
 
 const Carousel = ({ page }: { page: string }) => {
   const thisPage = pageData.find((e) => e.page === page);

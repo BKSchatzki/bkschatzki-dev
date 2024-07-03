@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 const PageWrapper = ({ children }: { children: ReactNode }) => {
   return (

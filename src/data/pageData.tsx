@@ -1,8 +1,8 @@
-import pageIcons from "./pageIcons";
-import pageMains from "./pageMains";
-import pageNavLinks from "./pageNavLinks";
-import pageSections from "./pageSections";
-import pageStyles from "./pageStyles";
+import pageIcons from './pageIcons';
+import pageMains from './pageMains';
+import pageNavLinks from './pageNavLinks';
+import pageSections from './pageSections';
+import pageStyles from './pageStyles';
 
 const emptyPageData = [
   {

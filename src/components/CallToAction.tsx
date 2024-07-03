@@ -1,12 +1,12 @@
-import { useRef } from "react";
+import { useRef } from 'react';
 
 import {
   motion,
   useInView,
-} from "framer-motion";
-import { Link } from "react-router-dom";
+} from 'framer-motion';
+import { Link } from 'react-router-dom';
 
-import pageData from "../data/pageData";
+import pageData from '../data/pageData';
 
 const CallToAction = ({ linkedPages }: { linkedPages: string[] }) => {
   const thesePages = pageData.filter((e) => linkedPages.includes(e.page));

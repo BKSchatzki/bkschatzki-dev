@@ -1,13 +1,13 @@
-import { MouseEventHandler } from "react";
+import { MouseEventHandler } from 'react';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 import {
   Link,
   useLocation,
-} from "react-router-dom";
+} from 'react-router-dom';
 
-import pageData from "../data/pageData";
-import SocialLinks from "./SocialLinks";
+import pageData from '../data/pageData';
+import SocialLinks from './SocialLinks';
 
 const NavLinks = ({
   closeMenu,

@@ -1,7 +1,7 @@
-import CallToAction from "../components/CallToAction";
-import Carousel from "../components/Carousel";
-import ContentWrapper from "../components/ContentWrapper";
-import Main from "../components/Main";
+import CallToAction from '../components/CallToAction';
+import Carousel from '../components/Carousel';
+import ContentWrapper from '../components/ContentWrapper';
+import Main from '../components/Main';
 
 const Services = () => {
   return (

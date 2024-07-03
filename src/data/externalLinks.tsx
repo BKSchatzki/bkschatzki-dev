@@ -4,7 +4,7 @@ import {
   Linkedin,
   Twitter,
   Youtube,
-} from "lucide-react";
+} from 'lucide-react';
 
 const externalLinks = [
   {

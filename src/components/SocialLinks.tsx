@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-import externalLinks from "../data/externalLinks";
-import Copyright from "./Copyright";
+import externalLinks from '../data/externalLinks';
+import Copyright from './Copyright';
 
 const SocialLinks = () => {
   const socials = externalLinks.find((e) => e.type === "socials");

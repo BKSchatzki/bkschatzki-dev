@@ -1,7 +1,7 @@
-import CallToAction from "../components/CallToAction";
-import ContentWrapper from "../components/ContentWrapper";
-import Main from "../components/Main";
-import Randomizer from "../components/Randomizer";
+import CallToAction from '../components/CallToAction';
+import ContentWrapper from '../components/ContentWrapper';
+import Main from '../components/Main';
+import Randomizer from '../components/Randomizer';
 
 const About = () => {
   return (

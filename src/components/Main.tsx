@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-import pageData from "../data/pageData";
+import pageData from '../data/pageData';
 
 const Main = ({
   page,
