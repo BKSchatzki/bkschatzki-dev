@@ -127,9 +127,15 @@ const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }
         <CardContent>
           <FormProvider {...form}>
             <form
+              name="contact"
               onSubmit={form.handleSubmit(handleFormSubmission)}
               className="flex flex-col gap-6"
             >
+              <input
+                type="hidden"
+                name="form-name"
+                value="contact"
+              />
               <FormField
                 control={form.control}
                 name="name"
