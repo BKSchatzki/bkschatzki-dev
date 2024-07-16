@@ -12,7 +12,10 @@ const H1 = React.forwardRef<HTMLHeadingElement, Props>(({ children, className, .
   return (
     <h1
       ref={ref}
-      className={cn('scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl', className)}
+      className={cn(
+        'header-space:text-4xl scroll-m-20 text-3xl font-extrabold tracking-tight 2xl:text-5xl',
+        className
+      )}
       {...props}
     >
       {children}
@@ -138,7 +141,7 @@ const InlineCode = React.forwardRef<HTMLElement, Props>(
       <code
         ref={ref}
         className={cn(
-          'bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold',
+          'relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold',
           className
         )}
         {...props}
@@ -154,7 +157,7 @@ const Lead = React.forwardRef<HTMLSpanElement, Props>(({ children, className, ..
   return (
     <span
       ref={ref}
-      className={cn('text-muted-foreground text-xl', className)}
+      className={cn('text-xl text-muted-foreground', className)}
       {...props}
     >
       {children}
@@ -193,7 +196,7 @@ const Muted = React.forwardRef<HTMLSpanElement, Props>(({ children, className, .
   return (
     <span
       ref={ref}
-      className={cn('text-muted-foreground text-sm', className)}
+      className={cn('text-sm text-muted-foreground', className)}
       {...props}
     >
       {children}
@@ -202,7 +205,25 @@ const Muted = React.forwardRef<HTMLSpanElement, Props>(({ children, className, .
 });
 Muted.displayName = 'Muted';
 
-export { Blockquote, H1, H2, H3, H4, InlineCode, Large, Lead, LI, Muted, OL, P, Small, UL };
+const Anchor = React.forwardRef<HTMLAnchorElement, Props>(
+  ({ children, className, ...props }, ref) => {
+    return (
+      <a
+        ref={ref}
+        className={cn(
+          'font-medium text-primary underline underline-offset-4 hover:brightness-150',
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </a>
+    );
+  }
+);
+Anchor.displayName = 'Anchor';
+
+export { Anchor, Blockquote, H1, H2, H3, H4, InlineCode, Large, Lead, LI, Muted, OL, P, Small, UL };
 
 /* SHADCN HAS TABLE, BUT TABLE COMPONENTS FROM TYPOGRAPHY INCLUDED HERE
 
