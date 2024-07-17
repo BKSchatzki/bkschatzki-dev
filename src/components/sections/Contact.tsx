@@ -76,7 +76,7 @@ const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }
   const handleFormSubmission = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     try {
-      const res = await fetch('/__form-helper__.html', {
+      const res = await fetch('/__forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({
@@ -129,6 +129,7 @@ const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }
               name="contact"
               onSubmit={form.handleSubmit(handleFormSubmission)}
               className="flex flex-col gap-6"
+              data-netlify="true"
             >
               <input
                 type="hidden"
