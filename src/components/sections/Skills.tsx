@@ -1,20 +1,19 @@
 import * as React from 'react';
 
-import { cn } from '@/lib/utils';
-
 import {
   H2,
   Large,
   Lead,
   LI,
   UL,
-} from '../typography';
+} from '@/components/typography';
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-} from '../ui/card';
+} from '@/components/ui/card';
+import { cn } from '@/lib/utils';
 
 interface Props {
   className?: string;

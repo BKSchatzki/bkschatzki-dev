@@ -2,20 +2,19 @@ import * as React from 'react';
 
 import Image from 'next/image';
 
-import { AspectRatio } from '@radix-ui/react-aspect-ratio';
-
 import {
   Anchor,
   H2,
   Large,
   P,
-} from '../typography';
+} from '@/components/typography';
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-} from '../ui/card';
+} from '@/components/ui/card';
+import { AspectRatio } from '@radix-ui/react-aspect-ratio';
 
 interface Props {
   className?: string;
