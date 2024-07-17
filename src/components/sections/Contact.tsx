@@ -76,7 +76,7 @@ const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }
   const handleFormSubmission = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     try {
-      const res = await fetch('/', {
+      const res = await fetch('/__form-helper__.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({

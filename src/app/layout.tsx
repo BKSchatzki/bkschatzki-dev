@@ -3,7 +3,6 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 
-import NetlifyForm from '@/components/netlify-form';
 import { ThemeProvider } from '@/components/theme-provider';
 import { cn } from '@/lib/utils';
 
@@ -13,6 +12,9 @@ export const metadata: Metadata = {
   title: 'Brendan K. Schatzki, Cool Stuff',
   description:
     "Here you can find Brendan's stray thoughts. You say, \"Where's your cool stuff? Scroll down to see how cool it is.",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
@@ -23,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
-        <NetlifyForm />
+        {/* <NetlifyForm /> */}
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
