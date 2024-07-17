@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Here you can find Brendan's stray thoughts. You say, \"Where's your cool stuff? Scroll down to see how cool it is.",
   icons: {
-    icon: '/favicon.ico',
+    icon: '/BrendanKSchatzki-Favicon.png',
   },
 };
 
