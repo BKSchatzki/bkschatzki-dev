@@ -57,10 +57,10 @@ const items = [
   },
 ];
 
-const Faq = () => {
+const Directory = () => {
   return (
-    <section id="faq">
-      <H2 className="header-space:px-6 border-0">Directory and FAQ.</H2>
+    <section id="directory">
+      <H2 className="border-0 header-space:px-6">Directory and FAQ.</H2>
       <Card>
         <Accordion
           type="single"
@@ -86,4 +86,4 @@ const Faq = () => {
   );
 };
 
-export default Faq;
+export default Directory;

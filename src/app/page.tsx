@@ -1,6 +1,6 @@
 import Contact from '@/components/sections/Contact';
 import CoolStuff from '@/components/sections/CoolStuff';
-import Faq from '@/components/sections/Faq';
+import Directory from '@/components/sections/Directory';
 import NameHeader from '@/components/sections/NameHeader';
 import PretentiousSentences from '@/components/sections/PretentiousSentences';
 import Skills from '@/components/sections/Skills';
@@ -15,7 +15,7 @@ export default function Home() {
         <PretentiousSentences />
       </div>
       <div className="flex max-w-3xl flex-col gap-10 pb-10 lg:pt-10">
-        <Faq />
+        <Directory />
         <CoolStuff />
       </div>
     </div>

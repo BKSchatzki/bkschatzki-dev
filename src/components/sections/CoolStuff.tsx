@@ -79,8 +79,14 @@ const CoolStuff = React.forwardRef<HTMLDivElement, Props>(({ className, ...props
                 )}
                 {text2}
               </CardContent>
-              <CardFooter>
-                <Anchor href="#faq">Back to top.</Anchor>
+              <CardFooter className="flex flex-col items-start justify-start gap-2">
+                <Anchor href="#">Back to top.</Anchor>
+                <Anchor
+                  href="#directory"
+                  className="lg:hidden"
+                >
+                  Back to directory.
+                </Anchor>
               </CardFooter>
             </Card>
           </article>
