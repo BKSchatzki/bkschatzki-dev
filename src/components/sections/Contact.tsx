@@ -44,11 +44,11 @@ const socials = [
   },
   {
     site: 'Github',
-    link: 'https://github.com//bkschatzki',
+    link: 'https://github.com/bkschatzki',
   },
   {
     site: 'Twitter',
-    link: 'https://x.com/in/bkschatzki',
+    link: 'https://x.com/bkschatzki',
   },
 ];
 
@@ -116,7 +116,7 @@ const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }
                   >
                     {social.site}
                   </Anchor>
-                  {index === socials.length - 2 ? ', or ' : ', '}
+                  {', '}
                 </React.Fragment>
               ))}{' '}
               or via form below:

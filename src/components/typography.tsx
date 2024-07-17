@@ -211,7 +211,7 @@ const Anchor = React.forwardRef<HTMLAnchorElement, Props>(
       <a
         ref={ref}
         className={cn(
-          'font-medium text-primary underline underline-offset-4 hover:brightness-150',
+          'font-medium text-primary underline underline-offset-4 hover:brightness-200',
           className
         )}
         {...props}
