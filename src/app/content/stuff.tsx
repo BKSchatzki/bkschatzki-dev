@@ -110,4 +110,31 @@ export const stuff = [
       </P>
     ),
   },
+  {
+    id: 'ecohz',
+    linkText: 'Solving Climate Funding',
+    title: 'The one where I accidentally became a founding engineer:',
+    media1: {
+      type: 'image',
+      src: '/images/Ecohz-UserDashboard.png',
+      description: 'Brendan K. Schatzki Ecohz User Dashboard',
+    },
+    media2: {
+      type: 'none',
+      src: '',
+      description: '',
+    },
+    text1: (
+      <P>
+        Despite how much I dunk on LinkedIn for its members&apos; propensity to sell the mundane as
+        profound, I admit that occasionally a connection becomes a friendship becomes a partnership.
+        I did not expect that contributing a frontend to a group passion project would end up
+        putting me at the head of the software development lifecycle for a nascent startup. Perks
+        are getting to refactor the whole stack. But as soon as I had gotten worked up to do the
+        engineering roadmap, my friend the founder went back to the drawing board and I&apos;m stuck
+        here twiddling my thumbs. (Kidding, business rules me.)
+      </P>
+    ),
+    text2: null,
+  },
 ];
