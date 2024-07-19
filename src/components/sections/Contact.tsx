@@ -63,7 +63,6 @@ const formSchema = z.object({
 
 const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }, ref) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isLocked, setIsLocked] = useState(false);
   const [submitIsSuccessful, setSubmitIsSuccessful] = useState(false);
   const [submitIsFailed, setSubmitIsFailed] = useState(false);
 
@@ -92,25 +91,12 @@ const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }
       if (res.ok) {
         setSubmitIsSuccessful(true);
         form.reset();
-        setIsLocked(true);
-        setTimeout(() => {
-          setSubmitIsSuccessful(false);
-          setIsLocked(false);
-        }, 5000);
       } else {
         setSubmitIsFailed(true);
-        setTimeout(() => {
-          setSubmitIsFailed(false);
-          setIsLocked(false);
-        }, 5000);
         console.error('Form submission failed: ', res.statusText);
       }
     } catch (error) {
       setSubmitIsFailed(true);
-      setTimeout(() => {
-        setSubmitIsFailed(false);
-        setIsLocked(false);
-      }, 5000);
       console.error('Form submission error: ', error);
     }
     setIsSubmitting(false);
@@ -119,7 +105,15 @@ const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }
   return (
     <div ref={ref}>
       <H2 className="border-0 header-space:px-6">Let&apos;s connect.</H2>
-      <Card className="bg-secondary/50">
+      <Card
+        className={
+          submitIsSuccessful
+            ? 'bg-success/10'
+            : submitIsFailed
+              ? 'bg-destructive/10'
+              : 'bg-secondary/50'
+        }
+      >
         <CardHeader>
           <CardTitle>
             <Large className="underline decoration-primary decoration-[0.3333rem] underline-offset-4">
@@ -207,15 +201,15 @@ const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }
               />
               <Button
                 type="submit"
-                disabled={isSubmitting || isLocked || submitIsSuccessful || submitIsFailed}
-                className="mt-7 hover:brightness-150 header-space:mt-2"
+                disabled={isSubmitting}
+                className={`mt-7 hover:brightness-150 header-space:mt-2`}
               >
                 {isSubmitting
                   ? 'Submitting'
                   : submitIsSuccessful
-                    ? 'Submitted'
+                    ? 'Submit again'
                     : submitIsFailed
-                      ? 'Error'
+                      ? 'Retry submit'
                       : 'Submit'}
               </Button>
             </form>
