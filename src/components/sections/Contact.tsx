@@ -63,6 +63,7 @@ const formSchema = z.object({
 
 const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }, ref) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isLocked, setIsLocked] = useState(false);
   const [submitIsSuccessful, setSubmitIsSuccessful] = useState(false);
   const [submitIsFailed, setSubmitIsFailed] = useState(false);
 
@@ -91,13 +92,25 @@ const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }
       if (res.ok) {
         setSubmitIsSuccessful(true);
         form.reset();
-        setTimeout(() => setSubmitIsSuccessful(false), 5000);
+        setIsLocked(true);
+        setTimeout(() => {
+          setSubmitIsSuccessful(false);
+          setIsLocked(false);
+        }, 5000);
       } else {
         setSubmitIsFailed(true);
+        setTimeout(() => {
+          setSubmitIsFailed(false);
+          setIsLocked(false);
+        }, 5000);
         console.error('Form submission failed: ', res.statusText);
       }
     } catch (error) {
       setSubmitIsFailed(true);
+      setTimeout(() => {
+        setSubmitIsFailed(false);
+        setIsLocked(false);
+      }, 5000);
       console.error('Form submission error: ', error);
     }
     setIsSubmitting(false);
@@ -194,26 +207,31 @@ const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }
               />
               <Button
                 type="submit"
-                disabled={isSubmitting}
-                className={cn(
-                  `mt-7 hover:brightness-150 header-space:mt-2 ${
-                    submitIsSuccessful
-                      ? 'bg-green-600 hover:bg-green-600'
-                      : submitIsFailed
-                        ? 'bg-red-600 hover:bg-red-600'
-                        : 'bg-primary'
-                  }`
-                )}
+                disabled={isSubmitting || isLocked || submitIsSuccessful || submitIsFailed}
+                className="mt-7 hover:brightness-150 header-space:mt-2"
               >
                 {isSubmitting
-                  ? 'Submitting...'
+                  ? 'Submitting'
                   : submitIsSuccessful
-                    ? 'Success, talk soon!'
+                    ? 'Submitted'
                     : submitIsFailed
-                      ? 'Error, try again.'
+                      ? 'Error'
                       : 'Submit'}
               </Button>
             </form>
+            <p
+              className={cn(
+                `mt-5 text-[0.8rem] font-medium ${
+                  submitIsSuccessful ? 'text-success' : submitIsFailed ? 'text-destructive' : 'm-0'
+                }`
+              )}
+            >
+              {submitIsSuccessful
+                ? 'Successfully submitted, looking forward to talking soon!'
+                : submitIsFailed
+                  ? 'Something went wrong. Please try again.'
+                  : ''}
+            </p>
           </FormProvider>
         </CardContent>
       </Card>
