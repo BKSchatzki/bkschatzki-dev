@@ -30,6 +30,7 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { cn } from '@/lib/utils';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 interface Props {
@@ -62,6 +63,7 @@ const formSchema = z.object({
 
 const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }, ref) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitIsSuccessful, setSubmitIsSuccessful] = useState(false);
   const [submitIsFailed, setSubmitIsFailed] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -75,6 +77,8 @@ const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }
 
   const handleFormSubmission = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
+    setSubmitIsSuccessful(false);
+    setSubmitIsFailed(false);
     try {
       const res = await fetch('/__forms.html', {
         method: 'POST',
@@ -85,23 +89,23 @@ const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }
         }).toString(),
       });
       if (res.ok) {
-        // Handle successful submission
+        setSubmitIsSuccessful(true);
+        form.reset();
+        setTimeout(() => setSubmitIsSuccessful(false), 5000);
       } else {
         setSubmitIsFailed(true);
         console.error('Form submission failed: ', res.statusText);
-        setTimeout(() => setSubmitIsFailed(false), 5000);
       }
     } catch (error) {
       setSubmitIsFailed(true);
       console.error('Form submission error: ', error);
-      setTimeout(() => setSubmitIsFailed(false), 5000);
     }
     setIsSubmitting(false);
   };
 
   return (
     <div ref={ref}>
-      <H2 className="header-space:px-6 border-0">Let&apos;s connect.</H2>
+      <H2 className="border-0 header-space:px-6">Let&apos;s connect.</H2>
       <Card className="bg-secondary/50">
         <CardHeader>
           <CardTitle>
@@ -184,16 +188,30 @@ const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }
                         className="focus:bg-background"
                       />
                     </FormControl>
-                    <FormMessage className="absolute -bottom-5 left-3" />
+                    <FormMessage className="absolute -bottom-10 left-3 header-space:-bottom-5" />
                   </FormItem>
                 )}
               />
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="mt-2 hover:brightness-150"
+                className={cn(
+                  `mt-7 hover:brightness-150 header-space:mt-2 ${
+                    submitIsSuccessful
+                      ? 'bg-green-600 hover:bg-green-600'
+                      : submitIsFailed
+                        ? 'bg-red-600 hover:bg-red-600'
+                        : 'bg-primary'
+                  }`
+                )}
               >
-                Submit
+                {isSubmitting
+                  ? 'Submitting...'
+                  : submitIsSuccessful
+                    ? 'Success, talk soon!'
+                    : submitIsFailed
+                      ? 'Error, try again.'
+                      : 'Submit'}
               </Button>
             </form>
           </FormProvider>
