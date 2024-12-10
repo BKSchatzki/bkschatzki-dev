@@ -56,7 +56,7 @@ const Skills = React.forwardRef<HTMLDivElement, Props>(({ className, ...props },
       className={cn(className)}
       {...props}
     >
-      <H2 className="header-space:px-6 border-0">Some skills and stuff.</H2>
+      <H2 className="border-0 header-space:px-6">Some skills and stuff.</H2>
       <Card className="bg-secondary/50">
         <CardHeader>
           <CardTitle>

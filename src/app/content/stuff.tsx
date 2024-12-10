@@ -6,6 +6,50 @@ import {
 
 export const stuff = [
   {
+    id: 'partyroombloom2',
+    linkText: 'PartyRoomBloom Update',
+    title: "I'm working on PartyRoomBloom",
+    media1: {
+      type: 'image',
+      src: '/images/PartyRoomBloom-Dashboard.png',
+      description: 'PartyRoomBloom Dashboard',
+    },
+    media2: {
+      type: 'none',
+      src: '',
+      description: '',
+    },
+    text1: (
+      <P>
+        <Large>
+          <Anchor
+            href="https://partyroombloom.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            PartyRoomBloom
+          </Anchor>{' '}
+          <Anchor
+            href="https://github.com/BKSchatzki/partyroombloom"
+            target="_blank"
+            rel="noreferrer"
+          >
+            (Repo)
+          </Anchor>
+        </Large>{' '}
+        now saves your scenes. The new design is absolutely killer, and allows you to keep your
+        scenes in account with a gorgeous accordion layout for ease of access. I am currently
+        working on the UI and backend of the AI simulation assistant. You can use it, but there are
+        still some kinks to iron out, and the simulations do not save anywhere. Eventually, I will
+        also add more modules. The goal is to fill the niche of short-term session management. There
+        are so many tools that help manage a campaign, but I have found it frustrating how game
+        masters have to keep a bunch of extensions and tabs up to run a single session. What about a
+        tool that lets them do all that on a single set of pages? Worth a checkout.
+      </P>
+    ),
+    text2: null,
+  },
+  {
     id: 'songstrudel',
     linkText: 'Getting Music Done',
     title: 'The one where I fixed creativity',

@@ -16,6 +16,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { IFrame } from '@/components/ui/iframe';
+import { cn } from '@/lib/utils';
 import { AspectRatio } from '@radix-ui/react-aspect-ratio';
 
 interface Props {
@@ -25,7 +26,7 @@ interface Props {
 
 const CoolStuff = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }, ref) => {
   return (
-    <section>
+    <section ref={ref}>
       <H2 className="border-0 header-space:px-6">Stuff you might think is cool.</H2>
       <div className="flex flex-col items-center justify-center gap-5">
         {stuff.map(({ id, title, media1, media2, text1, text2 }, i) => (
@@ -55,6 +56,7 @@ const CoolStuff = React.forwardRef<HTMLDivElement, Props>(({ className, ...props
                         src={media1.src}
                         alt={media1.description}
                         fill
+                        className={cn(`object-cover`)}
                       />
                     )}
                   </AspectRatio>
