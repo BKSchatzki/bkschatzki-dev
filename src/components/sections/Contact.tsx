@@ -47,10 +47,6 @@ const socials = [
     site: 'Github',
     link: 'https://github.com/bkschatzki',
   },
-  {
-    site: 'Twitter',
-    link: 'https://x.com/bkschatzki',
-  },
 ];
 
 const formSchema = z.object({
@@ -104,19 +100,19 @@ const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }
 
   return (
     <div ref={ref}>
-      <H2 className="border-0 header-space:px-6">Let&apos;s connect.</H2>
       <Card
         className={
           submitIsSuccessful
-            ? 'bg-success/10'
-            : submitIsFailed
-              ? 'bg-destructive/10'
-              : 'bg-secondary/50'
+          ? 'bg-success/10'
+          : submitIsFailed
+          ? 'bg-destructive/10'
+          : 'bg-secondary/50'
         }
       >
+        <H2 className="py-6 header-space:px-6">Let&apos;s connect.</H2>
         <CardHeader>
           <CardTitle>
-            <Large className="underline decoration-primary decoration-[0.3333rem] underline-offset-4">
+            <Large className="underline decoration-primary decoration-[0.1667rem] underline-offset-4">
               {socials.map((social, index) => (
                 <React.Fragment key={social.site}>
                   <Anchor

@@ -24,7 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
+      <body
+        className={cn(
+          'min-h-screen bg-background font-sans antialiased selection:bg-primary selection:text-[#0c0a09]',
+          fontSans.variable
+        )}
+      >
         {/* <NetlifyForm /> */}
         <ThemeProvider
           attribute="class"

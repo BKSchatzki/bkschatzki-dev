@@ -21,32 +21,21 @@ interface Props {
 }
 
 const skills = [
+  'React',
+  'Node',
+  'TypeScript',
   'JavaScript',
+  'Next.js',
+  'PostgreSQL',
+  'MongoDB',
+  'Express',
   'HTML',
   'CSS',
-  'Node.js',
-  'Express',
-  'React',
-  'SQL',
-  'MongoDB',
-  'TypeScript',
-  'Git & Version Control',
-  'REST API',
-  'GraphQL',
-  'Next.js',
-  'Prisma',
-  'Mongoose',
-  'Jest',
-  'Jira',
-  'Figma',
-  'Bootstrap',
-  'Material UI',
   'Tailwind CSS',
-  'OOP',
-  'Agile',
-  'Accessibility',
-  'Docker',
-  'Cloud Platforms',
+  'Git',
+  'OpenAI',
+  'Jest',
+  'Reat Testing Library',
 ];
 
 const Skills = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }, ref) => {
@@ -56,12 +45,11 @@ const Skills = React.forwardRef<HTMLDivElement, Props>(({ className, ...props },
       className={cn(className)}
       {...props}
     >
-      <H2 className="border-0 header-space:px-6">Some skills and stuff.</H2>
       <Card className="bg-secondary/50">
         <CardHeader>
           <CardTitle>
-            <Large className="underline decoration-primary decoration-[0.3333rem] underline-offset-8">
-              A non-exhaustive list lazily copied from my resume:
+            <Large className="underline decoration-primary decoration-[0.1667rem] underline-offset-8">
+              My Skills (some of them, anyway)
             </Large>
           </CardTitle>
         </CardHeader>

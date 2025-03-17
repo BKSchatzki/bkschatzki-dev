@@ -21,7 +21,7 @@ import { Card } from '../ui/card';
 
 const items = [
   {
-    trigger: 'Links to my cool stuff:',
+    trigger: 'Links to Stuff',
     content: (
       <UL className="m-0 flex flex-wrap gap-4">
         {stuff.map((item) => (
@@ -45,22 +45,11 @@ const items = [
       </UL>
     ),
   },
-  {
-    trigger: 'What happened to your old fancy portfolio?',
-    content: (
-      <P className="leading-1">
-        The old site was rigid. It functioned only as a showcase page that I would send potential
-        clients and employers and served no other purpose. I wanted a site that could also be a
-        microblog.
-      </P>
-    ),
-  },
 ];
 
 const Directory = () => {
   return (
     <section id="directory">
-      <H2 className="border-0 header-space:px-6">Directory and FAQ.</H2>
       <Card>
         <Accordion
           type="single"

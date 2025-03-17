@@ -27,7 +27,7 @@ interface Props {
 const CoolStuff = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }, ref) => {
   return (
     <section ref={ref}>
-      <H2 className="border-0 header-space:px-6">Stuff you might think is cool.</H2>
+      <H2 className="border-0 header-space:px-6">Projects, Updates, & Musings</H2>
       <div className="flex flex-col items-center justify-center gap-5">
         {stuff.map(({ id, title, media1, media2, text1, text2 }, i) => (
           <article
@@ -37,7 +37,7 @@ const CoolStuff = React.forwardRef<HTMLDivElement, Props>(({ className, ...props
             <Card>
               <CardHeader>
                 <CardTitle>
-                  <Large className="underline decoration-primary decoration-[0.3333rem] underline-offset-8">
+                  <Large className="underline decoration-primary decoration-[0.1667rem] underline-offset-8">
                     {title}
                   </Large>
                 </CardTitle>
