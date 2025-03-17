@@ -53,7 +53,7 @@ const formSchema = z.object({
   name: z.string().min(1, { message: 'Enter your name.' }),
   email: z.string().email('Enter a valid email.'),
   message: z.string().min(70, {
-    message: 'Message length should be >= half a classic tweet.',
+    message: 'Message length should be longer.',
   }),
 });
 
@@ -101,13 +101,14 @@ const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }
   return (
     <div ref={ref}>
       <Card
-        className={
+        className={cn(
+          'shadow-lg',
           submitIsSuccessful
-          ? 'bg-success/10'
-          : submitIsFailed
-          ? 'bg-destructive/10'
-          : 'bg-secondary/50'
-        }
+            ? 'bg-success/10'
+            : submitIsFailed
+              ? 'bg-destructive/10'
+              : 'bg-secondary/50'
+        )}
       >
         <CardHeader>
           <CardTitle>
@@ -155,7 +156,7 @@ const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }
                         className="focus:bg-background"
                       />
                     </FormControl>
-                    <FormMessage className="absolute -bottom-5 left-3" />
+                    <FormMessage className="absolute -bottom-5 left-1" />
                   </FormItem>
                 )}
               />
@@ -172,7 +173,7 @@ const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }
                         className="focus:bg-background"
                       />
                     </FormControl>
-                    <FormMessage className="absolute -bottom-5 left-3" />
+                    <FormMessage className="absolute -bottom-5 left-1" />
                   </FormItem>
                 )}
               />
@@ -190,7 +191,7 @@ const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }
                         className="focus:bg-background"
                       />
                     </FormControl>
-                    <FormMessage className="absolute -bottom-10 left-3 header-space:-bottom-5" />
+                    <FormMessage className="absolute -bottom-10 left-1 header-space:-bottom-5" />
                   </FormItem>
                 )}
               />

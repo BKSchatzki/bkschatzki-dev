@@ -12,7 +12,7 @@ interface Props {
 
 const NameHeader = React.forwardRef<HTMLHeadingElement, Props>(({ className, ...props }, ref) => {
   return (
-    <Card className="py-6 text-balance">
+    <Card className="py-6 text-balance shadow-lg">
       <H1
         ref={ref}
         className="scroll-m-20 px-6 text-3xl font-bold tracking-tighter header-space:px-6 underline decoration-primary underline-offset-4 decoration-[0.3333rem]"

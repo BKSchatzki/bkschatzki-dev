@@ -50,7 +50,7 @@ const items = [
 const Directory = () => {
   return (
     <section id="directory">
-      <Card>
+      <Card className="bg-secondary/50 shadow-lg">
         <Accordion
           type="single"
           defaultValue="item-0"

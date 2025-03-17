@@ -45,7 +45,7 @@ const Skills = React.forwardRef<HTMLDivElement, Props>(({ className, ...props },
       className={cn(className)}
       {...props}
     >
-      <Card className="bg-secondary/50">
+      <Card className="bg-secondary/50 shadow-lg">
         <CardHeader>
           <CardTitle>
             <Large className="underline decoration-primary decoration-[0.1667rem] underline-offset-8">
