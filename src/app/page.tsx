@@ -1,6 +1,7 @@
 import Contact from '@/components/sections/Contact';
 import CoolStuff from '@/components/sections/CoolStuff';
 import Directory from '@/components/sections/Directory';
+import Footer from '@/components/sections/Footer';
 import NameHeader from '@/components/sections/NameHeader';
 import Skills from '@/components/sections/Skills';
 
@@ -15,6 +16,7 @@ export default function Home() {
       <div className="flex max-w-3xl flex-col gap-10 pb-10 lg:pt-10">
         <Directory />
         <CoolStuff />
+        <Footer />
       </div>
     </div>
   );
