@@ -13,7 +13,7 @@ const H1 = React.forwardRef<HTMLHeadingElement, Props>(({ children, className, .
     <h1
       ref={ref}
       className={cn(
-        'scroll-m-20 text-3xl font-extrabold tracking-tight header-space:text-4xl 2xl:text-5xl',
+        'scroll-m-20 text-3xl font-extrabold tracking-tight header-space:text-4xl 2xl:text-5xl px-6',
         className
       )}
       {...props}
@@ -29,7 +29,7 @@ const H2 = React.forwardRef<HTMLHeadingElement, Props>(({ children, className, .
     <h2
       ref={ref}
       className={cn(
-        'scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0',
+        'scroll-m-20 border-b pb-2 text-3xl px-6 font-semibold tracking-tight first:mt-0',
         className
       )}
       {...props}
