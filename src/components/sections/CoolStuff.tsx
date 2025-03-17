@@ -27,14 +27,14 @@ interface Props {
 const CoolStuff = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }, ref) => {
   return (
     <section ref={ref}>
-      <H2 className="border-0 header-space:px-6">Projects, Updates, & Musings</H2>
-      <div className="flex flex-col items-center justify-center gap-5">
+      <H2 className="border-0 pb-6 header-space:px-6">Projects, Updates, & Musings</H2>
+      <div className="flex flex-col items-center justify-center gap-12">
         {stuff.map(({ id, title, media1, media2, text1, text2 }, i) => (
           <article
             key={title}
             id={id}
           >
-            <Card>
+            <Card className="bg-secondary/50">
               <CardHeader>
                 <CardTitle>
                   <Large className="underline decoration-primary decoration-[0.1667rem] underline-offset-8">
@@ -46,17 +46,19 @@ const CoolStuff = React.forwardRef<HTMLDivElement, Props>(({ className, ...props
                 {media1.type !== 'none' && (
                   <AspectRatio ratio={16 / 9}>
                     {media1.type === 'embed' && (
-                      <IFrame
-                        src={media1.src}
-                        title={media1.description}
-                      />
+                      <div className={cn(`h-full border-4 border-primary/50`)}>
+                        <IFrame
+                          src={media1.src}
+                          title={media1.description}
+                        />
+                      </div>
                     )}
                     {media1.type === 'image' && (
                       <Image
                         src={media1.src}
                         alt={media1.description}
                         fill
-                        className={cn(`object-cover`)}
+                        className={cn(`border-4 border-primary/50 object-cover`)}
                       />
                     )}
                   </AspectRatio>
@@ -65,16 +67,19 @@ const CoolStuff = React.forwardRef<HTMLDivElement, Props>(({ className, ...props
                 {media2.type !== 'none' && (
                   <AspectRatio ratio={16 / 9}>
                     {media2.type === 'embed' && (
-                      <IFrame
-                        src={media2.src}
-                        title={media2.description}
-                      />
+                      <div className={cn(`h-full border-4 border-primary/50`)}>
+                        <IFrame
+                          src={media2.src}
+                          title={media2.description}
+                        />
+                      </div>
                     )}
                     {media2.type === 'image' && (
                       <Image
                         src={media2.src}
                         alt={media2.description}
                         fill
+                        className={cn(`border-4 border-primary/50 object-cover`)}
                       />
                     )}
                   </AspectRatio>
