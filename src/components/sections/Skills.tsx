@@ -35,7 +35,7 @@ const skills = [
   'Git',
   'OpenAI',
   'Jest',
-  'Reat Testing Library',
+  'React Testing Library',
 ];
 
 const Skills = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }, ref) => {

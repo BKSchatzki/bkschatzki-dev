@@ -109,7 +109,6 @@ const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }
           : 'bg-secondary/50'
         }
       >
-        <H2 className="py-6 header-space:px-6">Let&apos;s connect.</H2>
         <CardHeader>
           <CardTitle>
             <Large className="underline decoration-primary decoration-[0.1667rem] underline-offset-4">
@@ -126,7 +125,7 @@ const Contact = React.forwardRef<HTMLDivElement, Props>(({ className, ...props }
                   {', '}
                 </React.Fragment>
               ))}{' '}
-              or via form below:
+              or form below:
             </Large>
           </CardTitle>
         </CardHeader>
